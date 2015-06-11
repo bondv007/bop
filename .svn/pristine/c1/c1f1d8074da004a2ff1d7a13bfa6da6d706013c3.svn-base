@@ -1,0 +1,252 @@
+<?php
+
+App::uses('AppController', 'Controller');
+
+/**
+ * Wods Controller(Workout of the day)
+ *
+ * @since 6 August 2013
+ * @version Cake Php 2.3.8
+ * @author Bhanu Prakash Pandey
+ */
+class WodsController extends AppController
+{
+
+
+/**
+ * admin_index method
+ * @param:
+ * @return void
+ */
+    public function admin_index()
+    {
+    	$conditions = array();
+		if ( !empty($this->request->query['keyword']))
+		{
+			$keyword = strtolower(trim($this->request->query['keyword']));
+			$conditions	= "( LOWER(Wod.title) LIKE '%" . $keyword . "%' OR LOWER(Category.title) LIKE '%" . $keyword . "%' OR LOWER(WodType.title) LIKE '%" . $keyword . "%')";
+		}
+		
+		$this->paginate = array(
+			'fields' => array('Wod.*','Category.title','WodType.title'),
+			'joins' => array(
+				array(
+					'table' => 'categories',
+					'alias' => 'Category',
+					'conditions' => array('Wod.category_id = Category.id')
+				),
+				array(
+					'table' => 'wod_types',
+					'alias' => 'WodType',
+					'conditions' => array('Wod.type_id = WodType.id')
+				)
+			),
+			'conditions' => $conditions,
+			'order' => 'Wod.id desc',
+			'limit' => ADMIN_PAGE_LIMIT
+		);
+		$wods = $this->paginate('Wod');
+		$this->set('wods', $wods);
+    }
+
+/**
+ * admin_view method
+ *
+ * @param string $id
+ * @return void
+ */
+    public function admin_view($id = null)
+    {
+		$this->Wod->id = $id;
+		if (!$this->Wod->exists())
+		{
+			throw new NotFoundException(__('Invalid wod found'));
+		}
+		$wod = $this->Wod->find('first',array(
+								'fields' => array('Wod.*','Category.title','WodType.title'),
+								'joins' => array(
+									array(
+										'table' => 'categories',
+										'alias' => 'Category',
+										'conditions' => array('Wod.category_id = Category.id')
+									),
+									array(
+										'table' => 'wod_types',
+										'alias' => 'WodType',
+										'conditions' => array('Wod.type_id = WodType.id')
+									)
+								),
+							)
+						);
+		$this->loadModel('WodMovement');
+		$wod_movements = $this->WodMovement->find('all',array(
+			'fields' => array('*'),
+			'joins' => array(
+					array(
+						'table' => 'movements',
+						'alias' => 'Movement',
+						'type' => 'left',
+						'conditions' => array('WodMovement.movement_id = Movement.id')
+					)
+			),
+			'conditions' => array('WodMovement.wod_id' => $id) )
+		);
+		$this->set('wod', $wod);
+		$this->set('wod_movements', $wod_movements);
+    }
+
+/**
+ * admin_add method
+ *
+ * @return void
+ */
+    public function admin_add()
+    {
+		if ($this->request->is('post'))
+		{
+			//pr($this->request->data);die;
+			$this->Wod->create();
+			if ($this->Wod->save($this->request->data))
+			{
+				$last_inserted_id = $this->Wod->getLastInsertID();
+				// Save WOD movements
+				if ( isset($this->request->data['movement_category']) && (isset($this->request->data['movement_option'])) )
+				{
+					$this->loadModel('WodMovement');
+					$movement_data = array();
+					foreach ($this->request->data['movement_category'] as $key => $value) {
+						$type = $this->request->data['movement_option'][$key];
+						$value = 0; $sub_type = '';
+						if ( $this->request->data['option_data'][$key] != '')
+						{
+							$value = $this->request->data['option_data'][$key];
+						}
+						
+						if ( $type == 'distance'){
+							$sub_type = $this->request->data['movement_distance'][$key];							
+						}else if ( $type == 'load'){
+							$sub_type = $this->request->data['movement_load'][$key];
+						}
+						$movement_data['WodMovement'][] = array(
+														'wod_id' => $last_inserted_id,
+														'movement_id' => $value,
+														'type' =>  $type,
+														'value' => $value,
+														'sub_type' => $sub_type
+													);
+					}
+					$this->WodMovement->saveAll($movement_data['WodMovement']);
+				}
+				$this->Session->setFlash(__('The WOD has been saved successfully'),'default',array(),'success');
+				$this->redirect(array ('action' => 'index'));
+			}
+			else
+			{
+				$errors = $this->Wod->validationErrors;
+				$this->set('invalidfields', $errors);
+			}
+		}
+		// get WOD category list
+		$this->loadModel('Category');
+		$categories = $this->Category->find('list',array('conditions' => array('Category.type' => 'wod') ));
+		
+		// get WOD types list
+		$this->loadModel('WodType');
+		$types = $this->WodType->find('list',array('conditions' => array('WodType.parent_id' => 0) ) );
+		
+		// get movements list
+		$this->loadModel('Movement');
+		$movements = $this->Movement->find('list');
+		
+		$this->set(compact('categories','types', 'movements'));
+    }
+
+/**
+ * admin_edit method
+ *
+ * @param string $id
+ * @return void
+ */
+    public function admin_edit($id = null)
+    {
+    	$this->loadModel('WodMovement');
+		$this->Wod->id = $id;
+		if (!$this->Wod->exists())
+		{
+			throw new NotFoundException(__('Invalid Wod Found'));
+		}
+		if ($this->request->is('post') || $this->request->is('put'))
+		{
+			if ($this->Wod->save($this->request->data))
+			{
+				// Save WOD movements
+				if ( isset($this->request->data['movement_category']) && (isset($this->request->data['movement_option'])) )
+				{					
+					$this->WodMovement->deleteAll(array('WodMovement.wod_id' => $this->request->data['Wod']['id']));
+					$movement_data = array();
+					foreach ($this->request->data['movement_category'] as $key => $value) {
+						$movement_data['WodMovement'][] = array(
+														'wod_id' => $this->request->data['Wod']['id'],
+														'movement_id' => $value,
+														'type' =>  $this->request->data['movement_option'][$key]
+													);
+					}
+					$this->WodMovement->saveAll($movement_data['WodMovement']);
+				}
+				$this->Session->setFlash(__('The WOD has been updated successfully'),'default',array(),'success');
+				$this->redirect(array ('action' => 'index'));
+			}
+			else
+			{
+				$errors = $this->Wod->validationErrors;
+				$this->set('invalidfields', $errors);
+			}
+		}
+		else
+		{
+			$this->request->data = $this->Wod->read(null, $id);			
+		}
+		// get WOD category list
+		$this->loadModel('Category');
+		$categories = $this->Category->find('list',array('conditions' => array('Category.type' => 'wod') ));
+		
+		// get WOD types list
+		$this->loadModel('WodType');
+		$types = $this->WodType->find('list',array('conditions' => array('WodType.parent_id' => 0) ) );
+		
+		// get movements list
+		$this->loadModel('Movement');
+		$movements = $this->Movement->find('list');
+		
+		$wod_movements = $this->WodMovement->find('all',array('conditions' => array('WodMovement.wod_id' => $id) ));
+		
+		$this->set(compact('categories','types', 'movements','wod_movements'));
+    }
+
+/**
+ * admin_delete method
+ *
+ * @param string $id
+ * @return void
+ */
+    public function admin_delete($id = null)
+    {
+		$this->Wod->id = $id;
+		if (!$this->Wod->exists())
+		{
+			throw new NotFoundException(__('Invalid Wod found'));
+		}
+		if ($this->Wod->delete())
+		{
+			$this->loadModel('WodMovement');
+			$this->WodMovement->deleteAll(array('WodMovement.wod_id' => $id));
+			$this->Session->setFlash(__('WOD deleted successfully'),'default',array(),'success');
+			$this->redirect(array ('action' => 'index'));
+		}
+		$this->Session->setFlash(__('WOD was not deleted'),'default',array(),'error');
+		$this->redirect(array ('action' => 'index'));
+    }
+
+
+
+}

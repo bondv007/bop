@@ -1,0 +1,426 @@
+	<!-- Slider -->
+	<section class="athlt-profile-top row">
+		<div class="page-mid">
+			<div class="filter-search row">
+				<h2>Search Filters</h2>
+				<form action="#">
+					<div class="colum">
+						<select>
+							<option>Date</option>
+						</select>						
+					</div>
+					<div class="colum">
+						<select>
+							<option>Region</option>
+						</select>						
+					</div>
+					<div class="colum">
+						<select>
+							<option>State</option>
+						</select>						
+					</div>
+					<div class="colum">
+						<select>
+							<option>Affiliate</option>
+						</select>						
+					</div>
+					<div class="colum">
+						<select>
+							<option>Athlete</option>
+						</select>						
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Slider End -->
+	
+	<!-- MId Section -->
+	<section class="body-content-bg ptb25 row">
+		<div class="page-mid">
+			<div class="body-content-mn row mt10">
+				
+				<div class="row">
+					<div class="list-tabing">
+						<div class="tabrow">
+							<ul>
+								<li><a href="#competitions">Competitions</a></li>
+								<li><a href="#throwdowns">Throwdowns</a></li>
+								<li><a href="#challenges">Challenges</a></li>
+							</ul>
+						</div>
+						
+						<div class="tab-content">
+							<div id="competitions" class="tab-content-list">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>		
+										<th scope="col" width="50">Placing</th>
+										<th scope="col">Competitor</th>
+										<th scope="col">Division</th>
+										<th scope="col">Final Score</th>
+										<th scope="col">WOD #1</th>
+										<th scope="col">WOD #2</th>
+										<th scope="col">WOD #3</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+								</table>
+							</div>
+
+							<div id="throwdowns" class="tab-content-list">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>		
+										<th scope="col" width="50">Placing</th>
+										<th scope="col">Competitor</th>
+										<th scope="col">Division</th>
+										<th scope="col">Final Score</th>
+										<th scope="col">WOD #1</th>
+										<th scope="col">WOD #2</th>
+										<th scope="col">WOD #3</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+								</table>
+							</div>
+
+							<div id="challenges" class="tab-content-list">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>		
+										<th scope="col" width="50">Placing</th>
+										<th scope="col">Competitor</th>
+										<th scope="col">Division</th>
+										<th scope="col">Final Score</th>
+										<th scope="col">WOD #1</th>
+										<th scope="col">WOD #2</th>
+										<th scope="col">WOD #3</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>11</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>John Doe</td>
+										<td>645</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results</td>
+										<td>Results.</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					
+					</div>
+					
+			</div>
+		</div>
+	</section>
+	<!-- MId Section End -->
+
+<!-- tab jquery --> 
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".tab-content-list").hide();									 
+	$(".tabrow li a").eq(0).addClass("active");									 
+	$(".tab-content-list").eq(0).show();									 
+	$(".tabrow li a").click(function(){
+	$(".tab-content-list").hide();									 
+	$(".tabrow li a").removeClass("active");
+	$(this).addClass("active");									 
+	var showcontent = $(this).attr("href");
+	$(showcontent).show();
+	});
+});
+</script>

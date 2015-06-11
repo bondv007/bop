@@ -1,0 +1,7 @@
+
+/* Scroll page to given element*/
+
+function scrollToAnchor(elem){
+    var aTag = $(elem);
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}

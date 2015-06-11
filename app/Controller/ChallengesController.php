@@ -1,0 +1,801 @@
+<?php 
+
+App::uses('Controller', 'Controller');
+
+/**
+ * Challenges Controller
+ *
+ * Purpose : Manage Challenges
+ * @project Crossfit
+ * @since 7 July 2014
+ * @version Cake Php 2.3.8
+ * @author : Vivek Sharma
+ */
+ 
+class ChallengesController extends AppController 
+{
+	public $name = 'Challenges';
+	public $components = array('RequestHandler');
+	public $uses = array('Challenge', 'User', 'Wod', 'WodMovement', 'Movement', 'WodType', 'Category', 'ChallengeWod','ChallengePeople','ChallengeScore');
+	
+	public function beforeFilter()
+	{		
+		parent::beforeFilter();
+		
+	}	
+	
+	/**
+	 * Method Name : challenege_user
+	 * Author Name : Vivek Sharma
+	 * Date : 7 July 2014
+	 * Description : challenge an athlete
+	 */
+	 public function challenge_user($user_id=null)
+	 {	 	
+		if ( !empty($this->request->data) )
+		{
+			$data = $this->data;
+			
+			$data['Challenge']['created'] = date('Y-m-d H:i:s');
+			$data['Challenge']['time'] = $data['Challenge']['time']['hour'].':'.$data['Challenge']['time']['min'].' '.$data['Challenge']['time']['meridian'];
+			
+			$this->Challenge->set($data);
+			if ( $this->Challenge->validates() )
+			{
+				$this->Challenge->create();
+				
+				if ( $challenge = $this->Challenge->save($data) )
+				{
+					$ch_wod = array(); $j=0; 	
+					$wod_data = $data['Wod'][1]['WodNum'][1]['Movement'];
+					
+					foreach($wod_data as $mov)
+					{
+						$ch_wod[$j] = $mov;
+						$ch_wod[$j]['challenge_id'] = $challenge['Challenge']['id'];
+						$j++;
+					}
+					
+					if ( !empty($ch_wod) )
+					{
+						$this->loadModel('ChallengeWod');
+						$this->ChallengeWod->create();
+						$this->ChallengeWod->saveAll($ch_wod);
+						
+						$wod_details = $this->Wod->findById($wod_data[0]['wod_id']); 
+						
+						$operator = ''; $people = $data['people'][0];
+						if ( count($data['people']) > 1 )
+						{
+							$operator = ' IN ';  
+							$people = $data['people'];
+						}
+						
+						/*Send Email to user*/	
+						$this->loadModel('Emailtemplate');
+						$email_content = $this->Emailtemplate->find('first', array('fields' => array('from_name', 'from_email', 'reply_to', 'subject', 'content'), 'conditions' => array('email_for' => 'challenge_request')));
+												
+					
+						$users = $this->User->find('all', array('conditions' => array('User.id'.$operator => $people)));
+						
+						$people_data = array(); $k=1;
+						
+						$people_data[0]['challenge_id'] = $challenge['Challenge']['id'];
+						$people_data[0]['user_id'] = $this->Auth->user('id');
+						$people_data[0]['video_link'] = $data['Challenge']['video_link'];
+						$people_data[0]['status'] = 'Accepted';
+						$people_data[0]['created'] = date('Y-m-d H:i:s');
+						
+						foreach($users as $user)
+						{
+							$people_data[$k]['challenge_id'] = $challenge['Challenge']['id'];
+							$people_data[$k]['user_id'] = $user['User']['id'];
+							$people_data[$k]['status'] = 'Pending';
+							$people_data[$k]['created'] = date('Y-m-d H:i:s');
+							
+							$content = $email_content['Emailtemplate']['content'];
+							$content = str_replace(array('{USERNAME}', '{CHALLENGER}', '{WOD}', '{DATE}', '{TIME}' ), 
+											array(ucfirst($user['User']['first_name']),
+													$this->Session->read('Auth.User.first_name').' '.$this->Session->read('Auth.User.last_name'), 
+													$wod_details['Wod']['title'], formatDate($challenge['Challenge']['date']),
+													$challenge['Challenge']['time']), $content);
+													
+							$subject = $email_content['Emailtemplate']['subject'];
+									
+							
+							$email = new CakeEmail('smtp');
+							$email->from(array (ADMIN_EMAIL => APPLICATION_NAME))
+								->to($user['User']['email'])
+								->emailFormat('html')
+								->subject($email_content['Emailtemplate']['subject'])
+								->send($content);	
+								
+							$k++;
+						}
+					
+						$this->loadModel('ChallengePeople');
+						$this->ChallengePeople->create();
+						$this->ChallengePeople->saveAll($people_data);						
+						
+						$this->Session->setFlash(__('Challenge request sent successfully.'),'default',array(),'success');	
+						$this->redirect(array('controller' => 'challenges', 'action' => 'pending_confirmations'));				
+					
+					}				
+					
+				}
+				
+			}else{
+					$this->Session->setFlash(__('There is some issue. Please try again later.'),'default',array(),'error');
+			}
+			$this->redirect($this->referer());
+		}
+		
+		
+		if ( !empty($user_id) )
+		{
+			$athlete = $this->User->find('first', array('conditions' => array('User.id' => $user_id),
+													'User.first_name', 'User.last_name', 'User.username','User.id','User.photo','User.email'));
+													
+			$this->set('athlete', $athlete);
+		}		
+		
+		// get WOD category list
+		$categories = $this->Category->find('list',array('conditions' => array('Category.type' => 'wod') ));
+		
+		// get WOD types list
+		$types = $this->WodType->find('list',array('conditions' => array('WodType.parent_id' => 0) ) );
+		
+		// get movements list
+		$movements = $this->Movement->find('list');
+		
+		
+		$this->Wod->recursive = 2;
+		$this->WodMovement->bindModel(array('belongsTo'=>array('Movement'=>array('className'=>'Movement','foreignKey'=>'movement_id'))));
+		$this->Wod->bindModel(array('hasMany'=>array('WodMovement'=>array('className'=>'WodMovement','foreignKey'=>'wod_id'))));
+		$wods = $this->Wod->find('all',array('order' => array('Wod.title'=>'asc'),
+											'conditions' => array('Wod.wod_save_type' => '1')));
+											
+		$allwods = array();			
+			
+		if( !empty($wods) )
+		{
+			$i = 0;
+			foreach( $wods as $aff)
+			{
+				if( !in_array($aff['Wod']['id'], $allwods))
+				{
+					$allwods[$i]['label'] = $aff['Wod']['title'];
+					$allwods[$i]['value'] = $aff['Wod']['id'];	
+					$i++;
+				}	
+				
+			}
+		}
+		$this->set('allwods', json_encode($allwods));
+		$this->set('wods',$wods);
+		$this->set(compact('categories','types', 'movements'));
+		
+		$this->render('challenge_user');		 		
+	 }
+
+
+ 	/**
+	 * Method Name : get_wod_details
+	 * Author Name : Vivek Sharma
+	 * Date : 21 May 2014
+	 * Description : used to display wod details and movements
+	 */
+	 public function get_wod_details()
+	 {
+			$this->layout = 'ajax';
+			$wod_id = $this->data['wod_id'];
+			
+			$this->Wod->recursive = 2;
+			$this->WodMovement->bindModel(array('belongsTo'=>array('Movement'=>array('className'=>'Movement','foreignKey'=>'movement_id'))));
+			$this->Wod->bindModel(array('hasMany'=>array('WodMovement'=>array('className'=>'WodMovement','foreignKey'=>'wod_id'))));
+			$wod = $this->Wod->find('first',array('conditions'=>array('Wod.id'=>$wod_id)));
+			
+			$this->set('wod',$wod);	
+			$this->set('ctr',$this->data['ctr']);
+			$this->set('div',$this->data['div']);	
+			$this->render('wod_details');	
+	 }
+	 
+	 /**
+	 * Method Name : requests
+	 * Author Name : Vivek Sharma
+	 * Date : 16 July 2014
+	 * Description : display all requests
+	 */
+	 public function requests()
+	 {
+	 	$user_id = $this->Session->read('Auth.User.id');
+		
+		$this->loadModel('ChallengePeople');
+		
+		$conditions = array('ChallengePeople.user_id' => $user_id, 'Challenge.from_id != ' => $this->Auth->user('id'));
+		
+		
+		$this->ChallengePeople->recursive = 3;
+		
+		$this->paginate = array('conditions' => $conditions,
+								'joins' => array(
+									array('table' => 'challenges','type' => 'inner','alias' => 'Challenge', 'conditions' => array('ChallengePeople.challenge_id = Challenge.id')),
+									array('table' => 'users', 'alias' => 'User','type' => 'inner', 'conditions' => array('Challenge.from_id = User.id')),
+									array('table' => 'challenge_wods', 'alias' => 'ChallengeWod','type' => 'left', 'conditions' => array('ChallengeWod.challenge_id = Challenge.id')),
+									array('table' => 'wods', 'alias' => 'Wod','type' => 'inner', 'conditions' => array('ChallengeWod.wod_id = Wod.id'))
+								),
+								'order' => array('ChallengePeople.created' => 'desc'),
+								'fields' => array('Challenge.*','ChallengePeople.*','User.first_name','User.last_name','ChallengeWod.*','Wod.title','Wod.id')
+								);
+								
+		$requests = $this->paginate('ChallengePeople');
+				
+		$this->set('requests', $requests);
+		$this->render('requests');
+	 }
+	
+	 /**
+	 * Method Name : update_status
+	 * Author Name : Vivek Sharma
+	 * Date : 16 July 2014
+	 * Description : accept or decline challenge
+	 */
+	public function update_status($status, $id)
+	{
+		$this->loadModel('ChallengePeople');
+		
+		$this->ChallengePeople->recursive = 2;
+		$this->Challenge->bindModel(array('belongsTo' => array('User' => array('className' => 'User', 'foreignKey' => 'from_id',
+																				'fields' => array('User.first_name', 'User.email'))				
+															)
+											));
+		$this->ChallengePeople->bindModel(array('belongsTo' => array('Challenge' => array('className' => 'Challenge', 'foreignKey' => 'challenge_id'
+																				)				
+															)
+											));
+		$challenge = $this->ChallengePeople->findById($id);
+		
+		$this->loadModel('Wod');
+		$ch_wods = $this->ChallengeWod->find('first', array('conditions' => array('ChallengeWod.challenge_id' => $challenge['Challenge']['id']),
+															'fields' => array('ChallengeWod.wod_id')));
+		$wod_details = $this->Wod->find('first', array('conditions' => array('Wod.id' => $ch_wods['ChallengeWod']['wod_id']),
+															'fields' => array('Wod.title')));													
+		
+		if ( !empty($challenge) )
+		{
+			if ( $status == 'accept' )
+			{
+				$updated_status = 'Accepted';
+				$template = 'challenge_accepted';
+			}else{
+				$updated_status = 'Declined';
+				$template = 'challenge_declined';
+			}
+			
+			
+			
+			if ( !empty($updated_status) )
+			{
+				$this->ChallengePeople->id = $challenge['ChallengePeople']['id'];
+				$this->ChallengePeople->save(array('status' => $updated_status, 'modified' => date('Y-m-d H:i:s')));
+				
+				/*Send Email to user*/			
+				$this->loadModel('Emailtemplate');
+				$email_content = $this->Emailtemplate->find('first', array('fields' => array('from_name', 'from_email', 'reply_to', 'subject', 'content'), 'conditions' => array('email_for' => $template)));
+				$content = $email_content['Emailtemplate']['content'];
+				
+				$content = str_replace(array('{USERNAME}', '{CHALLENGER}', '{WOD}', '{DATE}', '{TIME}','{VIDEO_LINK}' ), 
+									array($this->Session->read('Auth.User.first_name').' '.$this->Session->read('Auth.User.last_name'), 
+											ucfirst($challenge['Challenge']['User']['first_name']),
+											$wod_details['Wod']['title'], formatDate($challenge['Challenge']['date']),
+											$challenge['Challenge']['time'],''), $content);
+											
+				$email_content['Emailtemplate']['content'] = $content;
+						
+				
+				$email = new CakeEmail('smtp');
+				$email->from(array (ADMIN_EMAIL => APPLICATION_NAME))
+					->to($challenge['Challenge']['User']['email'])
+					->emailFormat('html')
+					->subject($email_content['Emailtemplate']['subject'])
+					->send($content);	
+				
+				$this->Session->setFlash(__('Challenge request '.$updated_status.'.'),'default',array(),'success');
+			} 
+		}else{
+			$this->Session->setFlash(__('Invalid request.'),'default',array(),'error');	
+		}
+		
+		$this->redirect($this->referer());
+	}
+	
+	
+	/**
+	 * Method Name : accept_challenge
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : save video link and accept challenge
+	 */
+	public function accept_challenge()
+	{
+		if ( !empty($this->data) )
+		{
+			$data = $this->data['ChallengePeople'];
+			$this->loadModel('ChallengePeople');
+			//pr($data); die;
+			$this->ChallengePeople->id = $data['id'];
+			if ( $this->ChallengePeople->save(array('video_link' => $data['video_link'], 'status' => 'Accepted')) )
+			{
+				$this->ChallengePeople->recursive = 2;
+				$this->Challenge->bindModel(array('belongsTo' => array('User' => array('className' => 'User', 'foreignKey' => 'from_id',
+																				'fields' => array('User.first_name', 'User.email'))				
+															)
+											));
+				$this->ChallengePeople->bindModel(array('belongsTo' => array('Challenge' => array('className' => 'Challenge', 'fireignKey' => 'challenge_id'))));
+				$challenge = $this->ChallengePeople->findById($data['id']);
+				//pr($challenge); die;
+				$this->loadModel('Wod');
+				$ch_wods = $this->ChallengeWod->find('first', array('conditions' => array('ChallengeWod.challenge_id' => $challenge['Challenge']['id']),
+																	'fields' => array('ChallengeWod.wod_id')));
+				$wod_details = $this->Wod->find('first', array('conditions' => array('Wod.id' => $ch_wods['ChallengeWod']['wod_id']),
+																	'fields' => array('Wod.title')));	
+																	
+				if ( !empty($challenge) )
+				{
+					/*Send Email to user*/			
+					$this->loadModel('Emailtemplate');
+					$email_content = $this->Emailtemplate->find('first', array('fields' => array('from_name', 'from_email', 'reply_to', 'subject', 'content'), 'conditions' => array('email_for' => 'challenge_accepted')));
+					$content = $email_content['Emailtemplate']['content'];
+					
+					$content = str_replace(array('{USERNAME}', '{CHALLENGER}', '{WOD}', '{DATE}', '{TIME}', '{VIDEO_LINK}' ), 
+										array($this->Session->read('Auth.User.first_name').' '.$this->Session->read('Auth.User.last_name'), 
+												ucfirst($challenge['Challenge']['User']['first_name']),
+												$wod_details['Wod']['title'], formatDate($challenge['Challenge']['date']),
+												$challenge['Challenge']['time'], ''), $content);
+												
+					$email_content['Emailtemplate']['content'] = $content;
+							
+					
+					$email = new CakeEmail('smtp');
+					$email->from(array (ADMIN_EMAIL => APPLICATION_NAME))
+						->to($challenge['Challenge']['User']['email'])
+						->emailFormat('html')
+						->subject($email_content['Emailtemplate']['subject'])
+						->send($content);	
+					
+					$this->Session->setFlash(__('Challenge request accepted.'),'default',array(),'success');
+				}													
+			}
+		}
+		$this->redirect(array('controller' => 'challenges', 'action' => 'requests'));
+	}
+	
+	/**
+	 * Method Name : view
+	 * Author Name : Vivek Sharma
+	 * Date : 16 July 2014
+	 * Description : view challenge
+	 */
+	 public function view($ch_id)
+	 {	 
+		if ( !empty($ch_id) )
+		{
+			$this->layout = 'ajax';
+			$this->Challenge->recursive = 4;
+			
+			$this->WodMovement->bindModel(array('belongsTo' => array('Movement' => array('className' => 'Movement', 
+																						 'foreignKey' => 'movement_id',
+																						 'fields' => array('title')
+																					))));
+			$this->Wod->bindModel(array('hasMany' => array('WodMovement' => array('className' => 'WodMovement', 
+																				  'foreignKey' => 'wod_id',
+																				  'fields' => array('movement_id','type')
+																				))));
+			$this->ChallengeWod->bindModel(array('belongsTo' => array('Wod' => array('className' => 'Wod', 
+																					 'foreignKey' => 'wod_id',
+																					 'fields' => array('id','title','description')
+																					))));
+			$this->Challenge->bindModel(array('hasMany' => array('ChallengeWod' => array('ClassName' => 'ChallengeWod', 
+																						 'foreignKey' => 'challenge_id')),
+											  
+											  'belongsTo' => array('User' => array('className' => 'User', 
+																					 'foreignKey' => 'from_id',
+																					 'fields' => array('User.first_name',
+																					 				   'User.last_name', 
+																					 				   'User.email')
+																					))
+												));
+			$challenge = $this->Challenge->findById($ch_id);
+			
+			$this->loadModel('ChallengePeople');
+			$ch_people = $this->ChallengePeople->find('first', array('conditions' => array('ChallengePeople.challenge_id' => $ch_id, 'ChallengePeople.user_id' => $this->Auth->user('id'))));
+			
+			
+			
+			if ( !empty($challenge) )
+			{
+				$this->request->data = $challenge;
+				$this->set('ch_people', $ch_people);
+				$this->set('challenge',$challenge);
+				$this->render('view');
+				
+			}else{
+				$this->Session->setFlash(__('Invalid request.'),'default',array(),'error');	
+				$this->redirect($this->referer());
+			}
+		}else{
+			
+				$this->Session->setFlash(__('Invalid request.'),'default',array(),'error');	
+				$this->redirect($this->referer());
+		}
+	 }
+
+	/**
+	 * Method Name : get_athletes
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : get athletes list
+	 */
+	 public function get_athletes()
+	 {
+	 	$term = $this->request->query['term'];
+		
+		$data = array(); $i=0;
+		if ( !empty($term) )
+		{
+			$this->loadModel('User');
+			$athletes = $this->User->find('all',array('conditions' => array('User.user_type' => 'athlete', 'User.first_name LIKE ' => $term.'%','User.id != ' => $this->Auth->user('id'), 'User.status' => '1')));
+			
+			if ( !empty($athletes) )
+			{
+				foreach($athletes as $ath)
+				{
+					$data[$i]['label'] = $ath['User']['first_name'].' '.$ath['User']['last_name'];
+					$data[$i]['value'] = $ath['User']['id'];
+					$i++;
+				}
+			}
+			
+		}
+		
+		echo json_encode($data); die;
+	 }
+	 
+	 
+	 /**
+	 * Method Name : get_user_data
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : get athletes user data
+	 */
+	 public function get_user_data()
+	 {
+	 	$id = $this->data['id'];
+		$data = 0;
+		if ( !empty($id) )
+		{
+			$user = $this->User->find('first', array('conditions' => array('User.id' => $id),
+													'fields' => array('User.id','User.first_name','User.last_name','User.photo','User.email')));
+			if ( !empty($user) )
+			{
+				$img = $this->webroot.'images/image_not_available.jpg';
+				if ( !empty($user['User']['photo']) )
+				{
+					$img = $this->webroot.'files/'.$user['User']['id'].'/thumb_'.$user['User']['photo'];
+				
+				}else{
+					$img = $this->webroot.'images/image_not_available.jpg'; 
+				}	
+					$data = $user['User']['id'].'|'.$img.'|'.$user['User']['first_name'].' '.$user['User']['last_name'].'|'.$user['User']['email'];
+				
+			}
+		}
+		echo $data; die;
+	 }
+	 
+	  /**
+	 * Method Name : get_wod_info
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : get wod information
+	 */
+	 public function get_wod_info($challenge_id)
+	 {
+	 	$this->layout = 'ajax';
+	 	if ( !empty($challenge_id) )
+		{
+			$this->loadModel('ChallengeWod');
+			
+			$this->ChallengeWod->bindmodel(array(
+												'belongsTo' => array(
+																	'Wod' => array(
+																			'className' => 'Wod',
+																			'foreignKey' => 'wod_id',
+																			'fields' => array('Wod.title','Wod.description','Wod.details')
+																	),
+																	'movement' => array(
+																			'className' => 'Movement',
+																			'foreignKey' => 'movement_id'
+																	)
+																)
+											));
+			$wod = $this->ChallengeWod->find('all', array('conditions' => array('ChallengeWod.challenge_id' => $challenge_id)));
+		
+			$this->set('wod', $wod);
+			$this->render('wod_info');
+		}
+	 }
+	 
+	 /**
+	 * Method Name : input_video_link
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : inpu vide link popup
+	 */
+	 public function input_video_link($people_id)
+	 {
+	 	$this->layout = 'ajax';
+	 	$this->set('people_id', $people_id);
+	 	$this->render('input_video_link');
+	 }
+	 
+	 
+	 /**
+	 * Method Name : pending_confirmations
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : display all my challenges which are not confirmed by people
+	 */
+	 public function pending_confirmations()
+	 {
+	 	$user_id = $this->Session->read('Auth.User.id');
+		
+		$this->Challenge->recursive = 3;
+		$this->ChallengeWod->bindModel(array('belongsTo' => array('Wod' => array('className' => 'Wod', 'foreignKey' => 'wod_id', 'fields' => array('Wod.title','Wod.id')))));
+		$this->Challenge->bindModel(array('hasOne' => array(
+														'ChallengeWod' => array(
+																			'className' => 'ChallengeWod',
+																			'foreignKey' => 'challenge_id'
+														)),
+											'hasMany' => array(
+														'ChallengePeople' => array(
+																			'className' => 'ChallengePeople', 
+																			'foreignKey' => 'challenge_id'
+															))			
+									));
+		
+		$challenges = $this->Challenge->find('all', array('conditions' => array('Challenge.from_id' => $user_id, 'Challenge.date >= ' => date('Y-m-d'))));
+		
+		$pending_list = array();
+		if ( !empty($challenges) )
+		{
+			foreach($challenges as $ch)
+			{	
+				if ( !empty($ch['ChallengePeople']) )
+				{
+					$flag = 0;	
+					foreach($ch['ChallengePeople']  as $people)
+					{
+						if ( $people['status'] != 'Pending' && $people['user_id'] != $this->Auth->user('id'))
+							$flag = 1;
+					}
+					if ( $flag == 0 )
+					{
+						$pending_list[] = $ch;
+					}
+				}				
+			}
+		}
+		//pr($pending_list); die;
+		$this->set('pending_list', $pending_list);
+		$this->render('pending_confirmations');
+	 }
+
+
+	/**
+	 * Method Name : my_events
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : display all my challenges which are started  confirmed by people
+	 */
+	 public function my_events()
+	 {
+	 	$user_id = $this->Session->read('Auth.User.id');
+		
+		$this->Challenge->recursive = 3;
+		$this->ChallengeWod->bindModel(array('belongsTo' => array('Wod' => array('className' => 'Wod', 'foreignKey' => 'wod_id', 'fields' => array('Wod.title','Wod.id')))));
+		$this->Challenge->bindModel(array('hasOne' => array(
+														'ChallengeWod' => array(
+																			'className' => 'ChallengeWod',
+																			'foreignKey' => 'challenge_id'
+														)),
+											'hasMany' => array(
+														'ChallengePeople' => array(
+																			'className' => 'ChallengePeople', 
+																			'foreignKey' => 'challenge_id'
+															))			
+									));
+		
+		$challenges = $this->Challenge->find('all', array('conditions' => array('Challenge.from_id' => $user_id, 'Challenge.date <= ' => date('Y-m-d'))));
+		
+		$events_list = array();
+		if ( !empty($challenges) )
+		{
+			foreach($challenges as $ch)
+			{	
+				if ( !empty($ch['ChallengePeople']) )
+				{
+					$flag = 0;	
+					foreach($ch['ChallengePeople']  as $people)
+					{
+						if ( $people['status'] == 'Accepted' && $people['user_id'] != $this->Auth->user('id'))
+							$flag = 1;
+					}
+					if ( $flag == 1 )
+					{
+						$events_list[] = $ch;
+					}
+				}	
+				
+			}
+		}
+		//pr($events_list); die;
+		$this->set('events_list', $events_list);
+		$this->render('my_events');
+	 }
+
+	/**
+	 * Method Name : future_events
+	 * Author Name : Vivek Sharma
+	 * Date : 23 July 2014
+	 * Description : display all my future challenges 
+	 */
+	 public function future_events()
+	 {
+	 	$user_id = $this->Session->read('Auth.User.id');
+		
+		$this->Challenge->recursive = 3;
+		$this->ChallengeWod->bindModel(array('belongsTo' => array('Wod' => array('className' => 'Wod', 'foreignKey' => 'wod_id', 'fields' => array('Wod.title','Wod.id')))));
+		$this->Challenge->bindModel(array('hasOne' => array(
+														'ChallengeWod' => array(
+																			'className' => 'ChallengeWod',
+																			'foreignKey' => 'challenge_id'
+														))));
+		$this->Challenge->bindModel(array('hasMany' => array('ChallengePeople' => array('className' => 'ChallengePeople', 'foreignKey' => 'challenge_id'))));
+		$challenges = $this->Challenge->find('all', array('conditions' => array('Challenge.from_id' => $user_id, 'Challenge.date > ' => date('Y-m-d'))));
+		
+		$pending_list = array();
+		
+		//pr($pending_list); die;
+		$this->set('pending_list', $challenges);
+		$this->render('future_events');
+	 }
+	 
+	  /**
+	 * Method Name : submit_score
+	 * Author Name : Vivek Sharma
+	 * Date : 4 August 2014
+	 * Description : submit scores
+	 */
+	 public function submit_score($people_id=null)
+	 {
+	 	
+		if ( !empty($this->data) )
+		{
+			$data = $this->data;		
+				
+			$data['ChallengePeople']['status'] = 'Contested';	
+			
+			$this->ChallengePeople->id = $data['ChallengePeople']['id'];
+			if ( $this->ChallengePeople->save($data) )
+			{
+				$people = $this->ChallengePeople->findById($data['ChallengePeople']['id']);
+				
+				$this->ChallengePeople->bindModel(array('belongsTo' => array('User' => array('className' => 'User', 'foreignKey' => 'user_id'))));
+				$all_people = $this->ChallengePeople->find('all', array('conditions' => array('ChallengePeople.challenge_id' => $people['ChallengePeople']['challenge_id']),
+																		'order' => array('ChallengePeople.score' => 'desc')));
+				
+				$flag = 0;
+				foreach($all_people as $ppl)
+				{
+					if ( $ppl['ChallengePeople']['status'] == 'Pending' || $ppl['ChallengePeople']['status'] == 'Accepted')
+						$flag = 1;
+				}	
+				
+				if ( $flag == 0 )
+				{
+					$challenge = $this->Challenge->findById($people['ChallengePeople']['challenge_id']);
+					$this->send_result_notification($all_people,$challenge);
+					
+					$this->Challenge->id = $people['ChallengePeople']['challenge_id'];
+					$this->Challenge->save(array('status' => 'Contested'));
+				}
+					
+					
+				$this->Session->setFlash(__('Score submitted successfully.'),'default',array(),'success');
+				$this->redirect(array('controller' => 'challenges', 'action' => 'requests'));
+			}	
+					
+		}
+		
+	 	$this->layout = 'ajax';		
+		
+		$this->ChallengePeople->recursive = 5;
+		$this->WodMovement->bindModel(array('belongsTo' => array('Movement' => array('className' => 'Movement','foreignKey' => 'movement_id','fields' => array('title')))));
+		$this->Wod->bindModel(array('hasMany' => array('WodMovement' => array('className' => 'WodMovement','foreignKey' => 'wod_id','fields' => array('movement_id','type','sub_type')))));
+		$this->ChallengeWod->bindModel(array('belongsTo' => array('Wod' => array('className' => 'Wod', 'foreignKey' => 'wod_id', 'fields' => array('Wod.title','Wod.id')))));
+		$this->Challenge->bindModel(array('hasOne' => array('ChallengeWod' => array('className' => 'ChallengeWod','foreignKey' => 'challenge_id'))));
+		$this->ChallengePeople->bindModel(array('belongsTo' => array('Challenge' => array('className' => 'Challenge','foreignKey' => 'challenge_id'))));
+		$challenge = $this->ChallengePeople->findById($people_id);
+	
+		if ( !empty($challenge) )
+		{
+			$this->set('challenge', $challenge);
+			$this->render('submit_score');
+		}
+	 }
+	
+	
+	 /**
+	 * Method Name : send_result_notification
+	 * Author Name : Vivek Sharma
+	 * Date : 4 August 2014
+	 * Description : Send result mail to participants
+	 */
+	 public function send_result_notification($arr,$challenge)
+	 {
+	 	//pr($arr); die;
+	 	/*Send Email to user*/	
+		$this->loadModel('Emailtemplate');
+		$email_content = $this->Emailtemplate->find('first', array('fields' => array('from_name', 'from_email', 'reply_to', 'subject', 'content'), 'conditions' => array('email_for' => 'challenge_result_mail')));
+						
+		$i=1;
+		foreach($arr as $user)
+		{
+						
+			$content = $email_content['Emailtemplate']['content'];
+			$content = str_replace(array('{USERNAME}', '{DATE}', '{TIME}','{POSITION}' ), 
+							array(ucfirst($user['User']['first_name']),
+									formatDate($challenge['Challenge']['date']),
+									$challenge['Challenge']['time'], $i), $content);
+									
+			$subject = $email_content['Emailtemplate']['subject'];
+					
+			
+			$email = new CakeEmail('smtp');
+			$email->from(array (ADMIN_EMAIL => APPLICATION_NAME))
+				->to($user['User']['email'])
+				->emailFormat('html')
+				->subject($email_content['Emailtemplate']['subject'])
+				->send($content);	
+				
+			$i++;
+		}
+		
+		return;
+	 }
+	
+	
+	  /**
+	 * Method Name : view_participant
+	 * Author Name : Vivek Sharma
+	 * Date : 4 August 2014
+	 * Description : View Participant scores
+	 */
+	 public function view_participants($challenge_id)
+	 {
+	 	$this->layout = 'ajax';
+	 
+	 	$this->Challenge->recursive = 2;
+	 	$this->ChallengePeople->bindModel(array('belongsTo' => array('User' => array('className' => 'User', 'foreignKey' => 'user_id'))));
+	 	$this->Challenge->bindModel(array('hasMany' => array('ChallengePeople' => array('className' => 'ChallengePeople', 'foreignKey' => 'challenge_id','order' => array('ChallengePeople.score' => 'desc')))));
+	 	$challenge = $this->Challenge->findById($challenge_id);
+	 	
+	 	$this->set('challenge', $challenge);
+	 	$this->render('view_participants');
+	 }
+
+	
+}
+	 	

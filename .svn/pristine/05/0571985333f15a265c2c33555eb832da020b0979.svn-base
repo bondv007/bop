@@ -1,0 +1,2425 @@
+2013-08-06 12:29:47 Error: [MissingControllerException] Controller class WodsController could not be found.
+Exception Attributes: array (
+  'class' => 'WodsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/wods/add
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-06 13:22:33 Error: [MissingActionException] Action UsersController::admin_manage() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_manage',
+)
+Request URL: /crossfit/website/admin/users/manage
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-06 13:22:48 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Wods/admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Wods/admin_index.ctp',
+)
+Request URL: /crossfit/website/admin/wods
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(WodsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-19 06:52:44 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Stack Trace:
+#0 /var/www/crossfit/website/app/Config/bootstrap.php(113): CakePlugin::load('Upload')
+#1 /var/www/crossfit/website/lib/Cake/Core/Configure.php(94): include('/var/www/crossf...')
+#2 /var/www/crossfit/website/lib/Cake/bootstrap.php(171): Configure::bootstrap(true)
+#3 /var/www/crossfit/website/app/webroot/index.php(93): include('/var/www/crossf...')
+#4 {main}
+2013-08-19 06:53:17 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Stack Trace:
+#0 /var/www/crossfit/website/app/Config/bootstrap.php(113): CakePlugin::load('Upload')
+#1 /var/www/crossfit/website/lib/Cake/Core/Configure.php(94): include('/var/www/crossf...')
+#2 /var/www/crossfit/website/lib/Cake/bootstrap.php(171): Configure::bootstrap(true)
+#3 /var/www/crossfit/website/app/webroot/index.php(93): include('/var/www/crossf...')
+#4 {main}
+2013-08-19 06:53:18 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Stack Trace:
+#0 /var/www/crossfit/website/app/Config/bootstrap.php(113): CakePlugin::load('Upload')
+#1 /var/www/crossfit/website/lib/Cake/Core/Configure.php(94): include('/var/www/crossf...')
+#2 /var/www/crossfit/website/lib/Cake/bootstrap.php(171): Configure::bootstrap(true)
+#3 /var/www/crossfit/website/app/webroot/index.php(93): include('/var/www/crossf...')
+#4 {main}
+2013-08-19 06:53:21 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Stack Trace:
+#0 /var/www/crossfit/website/app/Config/bootstrap.php(113): CakePlugin::load('Upload')
+#1 /var/www/crossfit/website/lib/Cake/Core/Configure.php(94): include('/var/www/crossf...')
+#2 /var/www/crossfit/website/lib/Cake/bootstrap.php(171): Configure::bootstrap(true)
+#3 /var/www/crossfit/website/app/webroot/index.php(93): include('/var/www/crossf...')
+#4 {main}
+2013-08-19 10:12:46 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/crossfit/website/app/View/Users/login.ctp, line 37]
+2013-08-19 10:12:46 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 37, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 37, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 10:12:49 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/crossfit/website/app/View/Users/login.ctp, line 37]
+2013-08-19 10:12:49 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 37)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 37, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 37, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:08:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '5211fca4' in 'field list'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('UPDATE `crossfi...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/Database/Mysql.php(382): DboSource->execute('UPDATE `crossfi...')
+#3 /var/www/crossfit/website/lib/Cake/Model/Model.php(2380): Mysql->update(Object(User), Array, NULL, Array)
+#4 /var/www/crossfit/website/app/Controller/UsersController.php(792): Model->updateAll(Array, Array)
+#5 [internal function]: UsersController->forgot_password()
+#6 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-08-19 11:10:01 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:10:01 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:10:24 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:10:24 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:10:42 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:10:42 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:11:00 Error: Fatal Error (4): syntax error, unexpected '$data' (T_VARIABLE), expecting ')' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:11:00 Error: [FatalErrorException] syntax error, unexpected '$data' (T_VARIABLE), expecting ')'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:11:11 Error: Fatal Error (4): syntax error, unexpected '$data' (T_VARIABLE), expecting ')' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:11:11 Error: [FatalErrorException] syntax error, unexpected '$data' (T_VARIABLE), expecting ')'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:11:31 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:11:31 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:12:23 Error: Fatal Error (4): syntax error, unexpected '$data' (T_VARIABLE), expecting ')' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:12:23 Error: [FatalErrorException] syntax error, unexpected '$data' (T_VARIABLE), expecting ')'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:13:02 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:13:02 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:13:11 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '5211fdc7' in 'field list'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('UPDATE `crossfi...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/Database/Mysql.php(382): DboSource->execute('UPDATE `crossfi...')
+#3 /var/www/crossfit/website/lib/Cake/Model/Model.php(2380): Mysql->update(Object(User), Array, NULL, Array)
+#4 /var/www/crossfit/website/app/Controller/UsersController.php(792): Model->updateAll(Array, Array)
+#5 [internal function]: UsersController->forgot_password()
+#6 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#7 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-08-19 11:13:30 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:13:30 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:13:40 Error: Fatal Error (4): syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:13:40 Error: [FatalErrorException] syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:13:48 Error: Fatal Error (4): syntax error, unexpected 'User' (T_STRING), expecting ')' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 790]
+2013-08-19 11:13:48 Error: [FatalErrorException] syntax error, unexpected 'User' (T_STRING), expecting ')'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 790)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 790, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:31:58 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:31:58 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:31:59 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:31:59 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:33:13 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:33:13 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/update_password/5212024b-e0d8-4770-959b-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:33:32 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:33:32 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:33:34 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:33:34 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:33:34 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:33:34 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 11:34:23 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 839]
+2013-08-19 11:34:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 839)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 839, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 12:19:26 Error: Fatal Error (4): syntax error, unexpected '$updateuser' (T_VARIABLE) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 842]
+2013-08-19 12:19:26 Error: [FatalErrorException] syntax error, unexpected '$updateuser' (T_VARIABLE)
+Request URL: /crossfit/website/users/update_password/52120a7f-9c00-43b3-ba60-180217a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 842)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 842, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 842, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 12:47:46 Error: [SocketException] Invalid email: ""
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(430): CakeEmail->_setEmail('_to', '', NULL)
+#1 /var/www/crossfit/website/app/Controller/UsersController.php(799): CakeEmail->to('')
+#2 [internal function]: UsersController->forgot_password()
+#3 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#4 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-08-19 12:48:16 Error: [SocketException] Invalid email: ""
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(430): CakeEmail->_setEmail('_to', '', NULL)
+#1 /var/www/crossfit/website/app/Controller/UsersController.php(799): CakeEmail->to('')
+#2 [internal function]: UsersController->forgot_password()
+#3 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#4 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-08-19 12:49:37 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 783]
+2013-08-19 12:49:37 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 783)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 12:49:56 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 783]
+2013-08-19 12:49:56 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 783)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 12:50:08 Error: Fatal Error (4): syntax error, unexpected '{' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 783]
+2013-08-19 12:50:08 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /crossfit/website/users/forgot_password
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 783)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 783, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 13:10:47 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 405]
+2013-08-19 13:10:47 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 13:10:47 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 405]
+2013-08-19 13:10:47 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 13:10:47 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 405]
+2013-08-19 13:10:47 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) in [/var/www/crossfit/website/app/Controller/UsersController.php, line 405]
+2013-08-19 13:10:47 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /crossfit/website/users/images/profile2.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 13:10:47 Error: [FatalErrorException] syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION)
+Request URL: /crossfit/website/users/images/fbom1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 405)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 405, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-19 13:31:29 Error: [MissingControllerException] Controller class EmailtemplateController could not be found.
+Exception Attributes: array (
+  'class' => 'EmailtemplateController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/emailtemplate
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 13:33:39 Error: [MissingControllerException] Controller class EmailtemplateController could not be found.
+Exception Attributes: array (
+  'class' => 'EmailtemplateController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/emailtemplate
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 13:33:58 Error: [MissingTableException] Table emailtemplates for model Emailtemplate was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'emailtemplates',
+  'class' => 'Emailtemplate',
+  'ds' => 'default',
+)
+Request URL: /crossfit/website/admin/emailtemplates
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Model.php(3243): Model->setSource('emailtemplates')
+#1 /var/www/crossfit/website/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/crossfit/website/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(394): Model->hasField('id')
+#4 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(Emailtemplate), Array, Array)
+#5 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Emailtemplate', Array, Array)
+#6 /var/www/crossfit/website/app/Controller/EmailtemplatesController.php(48): Controller->paginate('Emailtemplate')
+#7 [internal function]: EmailtemplatesController->admin_index()
+#8 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(EmailtemplatesController), Array)
+#9 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(EmailtemplatesController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-08-19 13:35:05 Error: [MissingControllerException] Controller class EmailtemplateController could not be found.
+Exception Attributes: array (
+  'class' => 'EmailtemplateController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/emailtemplate
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 13:35:24 Error: [MissingControllerException] Controller class EmailtemplateController could not be found.
+Exception Attributes: array (
+  'class' => 'EmailtemplateController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/emailtemplate
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-19 13:58:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): DboSource->read(Object(User), Array)
+#5 /var/www/crossfit/website/app/Controller/AppController.php(53): Model->find('first', Array)
+#6 /var/www/crossfit/website/app/Controller/UsersController.php(59): AppController->beforeFilter()
+#7 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#8 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#9 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#11 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-08-19 14:01:57 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-19 14:06:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /crossfit/website/
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): DboSource->read(Object(User), Array)
+#5 /var/www/crossfit/website/app/Controller/AppController.php(53): Model->find('first', Array)
+#6 /var/www/crossfit/website/app/Controller/PagesController.php(50): AppController->beforeFilter()
+#7 [internal function]: PagesController->beforeFilter(Object(CakeEvent))
+#8 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#9 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#11 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-08-20 04:37:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): DboSource->read(Object(User), Array)
+#5 /var/www/crossfit/website/app/Controller/AppController.php(53): Model->find('first', Array)
+#6 /var/www/crossfit/website/app/Controller/UsersController.php(59): AppController->beforeFilter()
+#7 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#8 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#9 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#11 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-08-20 04:37:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): DboSource->read(Object(User), Array)
+#5 /var/www/crossfit/website/app/Controller/AppController.php(53): Model->find('first', Array)
+#6 /var/www/crossfit/website/app/Controller/UsersController.php(59): AppController->beforeFilter()
+#7 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#8 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#9 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#11 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-08-20 04:38:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.username' in 'where clause'
+Request URL: /crossfit/website/users/login
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): DboSource->read(Object(User), Array)
+#5 /var/www/crossfit/website/app/Controller/AppController.php(90): Model->find('first', Array)
+#6 /var/www/crossfit/website/app/Controller/UsersController.php(59): AppController->beforeFilter()
+#7 [internal function]: UsersController->beforeFilter(Object(CakeEvent))
+#8 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#9 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(670): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(184): Controller->startupProcess()
+#11 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-08-20 06:06:17 Error: [MissingControllerException] Controller class PageController could not be found.
+Exception Attributes: array (
+  'class' => 'PageController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/page/index
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-20 06:14:05 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/index.ctp',
+)
+Request URL: /crossfit/website/pages/index/2
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 06:14:20 Error: [MissingActionException] Action PagesController::2() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => '2',
+)
+Request URL: /crossfit/website/pages/2
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 06:14:42 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/index.ctp',
+)
+Request URL: /crossfit/website/pages/index/2
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 06:34:03 Error: [MissingControllerException] Controller class NbmController could not be found.
+Exception Attributes: array (
+  'class' => 'NbmController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/nbm
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-20 06:35:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/crossfit/website/app/Controller/PagesController.php, line 188]
+2013-08-20 06:35:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /crossfit/website/pages/home/terms
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/crossf...', 188)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/crossf...', 188, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/crossf...', 188, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 06:49:42 Error: [MissingActionException] Action PagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+)
+Request URL: /crossfit/website/pages/
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 06:50:03 Error: [MissingActionException] Action PagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+)
+Request URL: /crossfit/website/pages/
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 07:54:47 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/reset_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/reset_password.ctp',
+)
+Request URL: /crossfit/website/users/reset_password/521320a6-ae38-402a-826d-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 07:55:21 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/reset_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/reset_password.ctp',
+)
+Request URL: /crossfit/website/users/reset_password/521320a6-ae38-402a-826d-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 07:55:23 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/reset_password.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/reset_password.ctp',
+)
+Request URL: /crossfit/website/users/reset_password/521320a6-ae38-402a-826d-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 07:55:34 Error: [MissingActionException] Action UsersController::update_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'update_password',
+)
+Request URL: /crossfit/website/users/update_password/521320a6-ae38-402a-826d-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 07:56:08 Error: [MissingActionException] Action UsersController::reset_password() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'reset_password',
+)
+Request URL: /crossfit/website/users/reset_password/521320a6-ae38-402a-826d-17cb17a9f72b
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 08:47:23 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 345]
+2013-08-20 08:47:23 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/register
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 345)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 08:47:29 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 345]
+2013-08-20 08:47:29 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/register
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 345)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 08:47:31 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/Controller/UsersController.php, line 345]
+2013-08-20 08:47:31 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users/register
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 345)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 345, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 09:01:08 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:02:26 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:26 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:27 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:27 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:33 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:33 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:33 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:33 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:36 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:36 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:36 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:36 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:41 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:41 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:41 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:41 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:47 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:47 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:48 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:02:48 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:03:06 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:03:59 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:04:53 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:04:53 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:04:54 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:04:54 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:05:03 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:09:40 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:09:40 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:09:40 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:09:40 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:15:18 Error: [SocketException] Invalid email: "xicom Test"
+Request URL: /crossfit/website/users/twitter_callback?oauth_token=9c48PqB9UndGvjoGqT27eJZoC8uxbjZiG4I4ggpVjM&oauth_verifier=33kx6AJohTNp5SctZ8uH17uuo2mux5otfO44WVqU
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(430): CakeEmail->_setEmail('_to', 'xicom Test', NULL)
+#1 /var/www/crossfit/website/app/Controller/UsersController.php(736): CakeEmail->to('xicom Test')
+#2 [internal function]: UsersController->twitter_callback()
+#3 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#4 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#6 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-08-20 09:15:18 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:15:18 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:15:19 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:15:19 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 09:19:54 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/twitter_callback.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/twitter_callback.ctp',
+)
+Request URL: /crossfit/website/users/twitter_callback?oauth_token=R6f17dihxDAiL44U1lQsHw78XdOVMxA0IN70ACyGMk&oauth_verifier=ExhqK1xDCxUw2dvUZNpG5fQks2CrSWMilFjef6B0YII
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:20:51 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/twitter_callback.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/twitter_callback.ctp',
+)
+Request URL: /crossfit/website/users/twitter_callback?oauth_token=u9XeuPqaBgjAIJxK6cSVMPNgPSJpn77d8kyT8c3A3o&oauth_verifier=l9k9xIaB3wqqxD8ZOC0wgpYcpMlR0dNT0s7MGA1Dc
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:55:08 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/twitter_callback.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/twitter_callback.ctp',
+)
+Request URL: /crossfit/website/users/twitter_callback?oauth_token=ReqF4weFtLXtVMk9gNTWuH9bqaW2koBlAPGc5eUeez8&oauth_verifier=xssdheX3ENGnGnlQjMN3fKYQc2o1QLEzTt0CyUYig0
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 09:56:41 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/twitter_callback.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/twitter_callback.ctp',
+)
+Request URL: /crossfit/website/users/twitter_callback?oauth_token=Y6h2AQ1Bgg1QxE4n8bYMXUkrbggXYU4X5xbhGboeHs&oauth_verifier=Nm0JtIA2OkZ90ICXlGmJwCCRxukxGRJMQxr8OEL5r40
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 10:42:17 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 10:42:17 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 10:42:17 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-20 11:10:28 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 11:11:38 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 12:59:56 Error: Fatal Error (4): syntax error, unexpected '<' in [/var/www/crossfit/website/app/View/Pages/admin_index.ctp, line 45]
+2013-08-20 12:59:56 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /crossfit/website/admin/pages
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 45)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 45, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 45, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-20 13:00:19 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /crossfit/website/admin/pages/delete/5
+Stack Trace:
+#0 [internal function]: PagesController->admin_delete('5')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 13:04:58 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /crossfit/website/admin/pages/delete/5
+Stack Trace:
+#0 [internal function]: PagesController->admin_delete('5')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 13:05:12 Error: [MissingControllerException] Controller class PageController could not be found.
+Exception Attributes: array (
+  'class' => 'PageController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/page/delete/5
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-20 13:05:16 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /crossfit/website/admin/pages/delete/5
+Stack Trace:
+#0 [internal function]: PagesController->admin_delete('5')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 13:06:11 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /crossfit/website/admin/pages/deletedata/4
+Stack Trace:
+#0 [internal function]: PagesController->admin_deletedata('4')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-08-20 13:10:28 Error: Fatal Error (1): Call to a member function exists() on a non-object in [/var/www/crossfit/website/app/Controller/EmailtemplatesController.php, line 124]
+2013-08-20 13:10:28 Error: [FatalErrorException] Call to a member function exists() on a non-object
+Request URL: /crossfit/website/admin/emailtemplates/delete/7
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/crossf...', 124)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/crossf...', 124, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/crossf...', 124, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-21 05:03:06 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/crossfit/website/app/View/Elements/loggedin_slider.ctp, line 4]
+2013-08-21 05:03:06 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 4, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 4, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-21 05:07:42 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /var/www/crossfit/website/lib/Cake/View/View.php(833): HelperCollection->__isset('Auth')
+#2 /var/www/crossfit/website/app/View/Elements/loggedin_slider.ctp(4): View->__get('Auth')
+#3 /var/www/crossfit/website/lib/Cake/View/View.php(945): include('/var/www/crossf...')
+#4 /var/www/crossfit/website/lib/Cake/View/View.php(907): View->_evaluate('/var/www/crossf...', Array)
+#5 /var/www/crossfit/website/lib/Cake/View/View.php(1208): View->_render('/var/www/crossf...', Array)
+#6 /var/www/crossfit/website/lib/Cake/View/View.php(414): View->_renderElement('/var/www/crossf...', Array, Array)
+#7 /var/www/crossfit/website/app/View/Layouts/default.ctp(51): View->element('loggedin_slider')
+#8 /var/www/crossfit/website/lib/Cake/View/View.php(945): include('/var/www/crossf...')
+#9 /var/www/crossfit/website/lib/Cake/View/View.php(907): View->_evaluate('/var/www/crossf...', Array)
+#10 /var/www/crossfit/website/lib/Cake/View/View.php(535): View->_render('/var/www/crossf...')
+#11 /var/www/crossfit/website/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#12 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render('athlete_index', NULL)
+#13 /var/www/crossfit/website/app/Controller/UsersController.php(396): Controller->render('athlete_index')
+#14 [internal function]: UsersController->index()
+#15 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#17 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#18 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-08-21 05:08:16 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /var/www/crossfit/website/lib/Cake/View/View.php(833): HelperCollection->__isset('Auth')
+#2 /var/www/crossfit/website/app/View/Elements/loggedin_slider.ctp(4): View->__get('Auth')
+#3 /var/www/crossfit/website/lib/Cake/View/View.php(945): include('/var/www/crossf...')
+#4 /var/www/crossfit/website/lib/Cake/View/View.php(907): View->_evaluate('/var/www/crossf...', Array)
+#5 /var/www/crossfit/website/lib/Cake/View/View.php(1208): View->_render('/var/www/crossf...', Array)
+#6 /var/www/crossfit/website/lib/Cake/View/View.php(414): View->_renderElement('/var/www/crossf...', Array, Array)
+#7 /var/www/crossfit/website/app/View/Layouts/default.ctp(51): View->element('loggedin_slider')
+#8 /var/www/crossfit/website/lib/Cake/View/View.php(945): include('/var/www/crossf...')
+#9 /var/www/crossfit/website/lib/Cake/View/View.php(907): View->_evaluate('/var/www/crossf...', Array)
+#10 /var/www/crossfit/website/lib/Cake/View/View.php(535): View->_render('/var/www/crossf...')
+#11 /var/www/crossfit/website/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#12 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render('athlete_index', NULL)
+#13 /var/www/crossfit/website/app/Controller/UsersController.php(396): Controller->render('athlete_index')
+#14 [internal function]: UsersController->index()
+#15 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#17 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#18 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2013-08-21 05:20:40 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images1.jpeg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:22:29 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/View/Elements/loggedin_slider.ctp, line 26]
+2013-08-21 05:22:29 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 26)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 26, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 26, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-21 05:22:51 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/www/crossfit/website/app/View/Elements/loggedin_slider.ctp, line 25]
+2013-08-21 05:22:51 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /crossfit/website/users
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 25, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 25, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-08-21 05:23:19 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images1.jpeg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:19 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images1.jpeg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:25 Error: [MissingActionException] Action EmailtemplatesController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'EmailtemplatesController',
+  'action' => 'edit',
+)
+Request URL: /crossfit/website/emailtemplates/edit
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(EmailtemplatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:24:26 Error: [MissingActionException] Action EmailtemplatesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'EmailtemplatesController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/emailtemplates/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(EmailtemplatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:24:26 Error: [MissingActionException] Action EmailtemplatesController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'EmailtemplatesController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/emailtemplates/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(EmailtemplatesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:24:38 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images1.jpeg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:45 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images1.jpeg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:24:46 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/63/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/scl-badge.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/add4.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/msg1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/scl-badge.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/admin-setting.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/profile1.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-08-21 05:42:12 Error: [MissingActionException] Action UsersController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'images',
+)
+Request URL: /crossfit/website/users/images/add4.png
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-04-29 11:08:50 Error: Fatal Error (4): syntax error, unexpected '-', expecting '(' in [/var/www/crossfit/website/app/Controller/PagesController.php, line 205]
+2014-04-29 11:08:50 Error: [FatalErrorException] syntax error, unexpected '-', expecting '('
+Request URL: /crossfit/website/
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 205)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 205, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 205, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-29 11:08:55 Error: Fatal Error (4): syntax error, unexpected '-', expecting '(' in [/var/www/crossfit/website/app/Controller/PagesController.php, line 205]
+2014-04-29 11:08:55 Error: [FatalErrorException] syntax error, unexpected '-', expecting '('
+Request URL: /crossfit/website/terms-conditions
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 205)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 205, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 205, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-04-29 11:09:48 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp',
+)
+Request URL: /crossfit/website/terms-conditions
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName('terms-condition...')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render('terms-condition...', NULL)
+#2 /var/www/crossfit/website/app/Controller/PagesController.php(227): Controller->render('terms-condition...')
+#3 [internal function]: PagesController->show('terms-condition...')
+#4 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-04-29 11:10:27 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp',
+)
+Request URL: /crossfit/website/terms-conditions
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName('terms-condition...')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render('terms-condition...', NULL)
+#2 /var/www/crossfit/website/app/Controller/PagesController.php(227): Controller->render('terms-condition...')
+#3 [internal function]: PagesController->show('terms-condition...')
+#4 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-04-29 11:10:55 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/terms-conditions.ctp',
+)
+Request URL: /crossfit/website/terms-conditions
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName('terms-condition...')
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render('terms-condition...', NULL)
+#2 /var/www/crossfit/website/app/Controller/PagesController.php(227): Controller->render('terms-condition...')
+#3 [internal function]: PagesController->show('terms-condition...')
+#4 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2014-04-29 11:12:56 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/about_us.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/about_us.ctp',
+)
+Request URL: /crossfit/website/about-us
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-29 11:13:12 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Pages/about_us.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Pages/about_us.ctp',
+)
+Request URL: /crossfit/website/about-us
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-04-29 12:17:46 Error: [MissingControllerException] Controller class RulesPolicyController could not be found.
+Exception Attributes: array (
+  'class' => 'RulesPolicyController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/rules_policy
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-04-29 12:18:45 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'crossfit\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /crossfit/website/rules_policy
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /var/www/crossfit/website/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Model.php(3221): ConnectionManager::getDataSource('default')
+#3 /var/www/crossfit/website/lib/Cake/Model/Model.php(1107): Model->setDataSource('default')
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(3243): Model->setSource('pages')
+#5 /var/www/crossfit/website/lib/Cake/Model/Model.php(2696): Model->getDataSource()
+#6 /var/www/crossfit/website/app/Controller/PagesController.php(216): Model->find('first', Array)
+#7 [internal function]: PagesController->show('rules_policy')
+#8 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-01 09:14:06 Error: Model User, Field photo: Unable to move the uploaded file to /var/www/crossfit/website/app/webroot/files/70/dhtml5-ad-320x250.jpg
+2014-05-01 09:14:06 Error: [UploadException] Unable to upload file
+Request URL: /crossfit/website/users/register
+Stack Trace:
+#0 [internal function]: UploadBehavior->afterSave(Object(User), true, Array)
+#1 /var/www/crossfit/website/lib/Cake/Utility/ObjectCollection.php(132): call_user_func_array(Array, Array)
+#2 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#3 /var/www/crossfit/website/lib/Cake/Event/CakeEventManager.php(248): call_user_func(Array, Object(CakeEvent))
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(1772): CakeEventManager->dispatch(Object(CakeEvent))
+#5 /var/www/crossfit/website/app/Controller/UsersController.php(265): Model->save(Array)
+#6 [internal function]: UsersController->register()
+#7 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-05-01 09:16:25 Error: [SocketException] SMTP Error: 535 5.7.8 http://support.google.com/mail/bin/answer.py?answer=14257 ph1sm152322654pac.14 - gsmtp
+Request URL: /crossfit/website/users/register
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Network/Email/SmtpTransport.php(146): SmtpTransport->_smtpSend('dGVzdDEzMTM=', '235')
+#1 /var/www/crossfit/website/lib/Cake/Network/Email/SmtpTransport.php(62): SmtpTransport->_auth()
+#2 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(1075): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/crossfit/website/app/Controller/UsersController.php(286): CakeEmail->send('<p>???Hi Ssss,<...')
+#4 [internal function]: UsersController->register()
+#5 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-01 09:21:13 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-01 09:21:51 Error: [MissingViewException] View file "/var/www/crossfit/website/app/View/Users/facebook.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/var/www/crossfit/website/app/View/Users/facebook.ctp',
+)
+Request URL: /crossfit/website/users/facebook
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-05-01 10:13:16 Error: [MissingTableException] Table aboutuses for model Aboutus was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'aboutuses',
+  'class' => 'Aboutus',
+  'ds' => 'default',
+)
+Request URL: /crossfit/website/admin/aboutus/teamlist
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Model.php(3243): Model->setSource('aboutuses')
+#1 /var/www/crossfit/website/lib/Cake/Model/Model.php(1318): Model->getDataSource()
+#2 /var/www/crossfit/website/lib/Cake/Model/Model.php(1401): Model->schema()
+#3 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(394): Model->hasField('id')
+#4 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(144): PaginatorComponent->validateSort(Object(AppModel), Array, Array)
+#5 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('Aboutus', Array, Array)
+#6 /var/www/crossfit/website/app/Controller/AboutusController.php(41): Controller->paginate('Aboutus')
+#7 [internal function]: AboutusController->admin_teamlist()
+#8 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(AboutusController), Array)
+#9 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AboutusController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-01 10:15:54 Error: [MissingActionException] Action AboutusController::admin_Team() could not be found.
+Exception Attributes: array (
+  'controller' => 'AboutusController',
+  'action' => 'admin_Team',
+)
+Request URL: /crossfit/website/admin/aboutus/Team
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AboutusController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-01 10:39:36 Error: Fatal Error (1): Call to undefined method AboutusController::create_all_thumbs() in [/var/www/crossfit/website/app/Controller/AboutusController.php, line 96]
+2014-05-01 10:39:36 Error: [FatalErrorException] Call to undefined method AboutusController::create_all_thumbs()
+Request URL: /crossfit/website/admin/aboutus/teamadd
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/crossf...', 96)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/crossf...', 96, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/crossf...', 96, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-01 10:51:55 Error: Fatal Error (1): Call to undefined function formatDateTime() in [/var/www/crossfit/website/app/View/Aboutus/admin_teamlist.ctp, line 64]
+2014-05-01 10:51:55 Error: [FatalErrorException] Call to undefined function formatDateTime()
+Request URL: /crossfit/website/admin/aboutus/teamlist
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/crossf...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/crossf...', 64, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/crossf...', 64, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-01 10:53:09 Error: [MissingControllerException] Controller class AmbassadorsController could not be found.
+Exception Attributes: array (
+  'class' => 'AmbassadorsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/admin/ambassadors/list
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 10:55:40 Error: [MissingActionException] Action AboutusController::admin_list() could not be found.
+Exception Attributes: array (
+  'controller' => 'AboutusController',
+  'action' => 'admin_list',
+)
+Request URL: /crossfit/website/admin/aboutus/list
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AboutusController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-05-01 10:56:08 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/files/aboutus/458763b3d6ebb7395d4a0053040f7145_100x100.jpg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:15:28 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/files/aboutus/ebcd49abd835841c30487a901d506d91_110x110.jpg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:17:52 Error: [MissingPluginException] Plugin Upload could not be found.
+Exception Attributes: array (
+  'plugin' => 'Upload',
+)
+Request URL: /crossfit/website/admin/users/manage
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Core/App.php(367): CakePlugin::path('Upload')
+#1 /var/www/crossfit/website/lib/Cake/Core/App.php(228): App::pluginPath('Upload')
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(549): App::path('Model/Behavior', 'Upload')
+#3 [internal function]: App::load('UploadBehavior')
+#4 [internal function]: spl_autoload_call('UploadBehavior')
+#5 /var/www/crossfit/website/lib/Cake/Model/BehaviorCollection.php(122): class_exists('UploadBehavior')
+#6 /var/www/crossfit/website/lib/Cake/Model/BehaviorCollection.php(68): BehaviorCollection->load('Upload.Upload', Array)
+#7 /var/www/crossfit/website/lib/Cake/Model/Model.php(748): BehaviorCollection->init('User', Array)
+#8 [internal function]: Model->__construct(Array)
+#9 /var/www/crossfit/website/lib/Cake/Utility/ClassRegistry.php(168): ReflectionClass->newInstance(Array)
+#10 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(734): ClassRegistry::init(Array)
+#11 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(367): Controller->loadModel('User')
+#12 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(269): Controller->__isset('User')
+#13 /var/www/crossfit/website/lib/Cake/Controller/Component/PaginatorComponent.php(137): PaginatorComponent->_getObject('User')
+#14 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(1074): PaginatorComponent->paginate('User', Array, Array)
+#15 /var/www/crossfit/website/app/Controller/UsersController.php(157): Controller->paginate('User')
+#16 [internal function]: UsersController->admin_manage()
+#17 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#18 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#19 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#20 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2014-05-01 11:46:02 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/files/aboutus/c4d43a391200e312e06d26151cc62bc0_110x110.jpg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:50:26 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/ckeditor/ckeditor.js
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:53:05 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/ckeditor/ckeditor.js
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:53:11 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/ckeditor/ckeditor.js
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:54:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/js/ckeditor/ckfinder/ckfinder.html?type=Images&CKEditor=content&CKEditorFuncNum=2&langCode=en
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:55:45 Error: [MissingControllerException] Controller class CkeditorController could not be found.
+Exception Attributes: array (
+  'class' => 'CkeditorController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images&CKEditor=content&CKEditorFuncNum=2&langCode=en
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-01 11:55:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/js/ckeditor/ckfinder/ckfinder.html?type=Images&CKEditor=content&CKEditorFuncNum=2&langCode=en
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 06:10:55 Error: [MissingControllerException] Controller class AboutUsController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutUsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/about_us
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 06:11:14 Error: [MissingControllerException] Controller class AboutUsController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutUsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/about_us
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 06:11:15 Error: [MissingControllerException] Controller class AboutUsController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutUsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/about_us
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 06:11:16 Error: [MissingControllerException] Controller class AboutUsController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutUsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/about_us
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 06:11:40 Error: [MissingControllerException] Controller class AboutUsController could not be found.
+Exception Attributes: array (
+  'class' => 'AboutUsController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/about_us
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 07:22:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'get_block' at line 1
+Request URL: /crossfit/website/aboutus
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('get_block', Array)
+#2 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('get_block', Array, Array)
+#3 /var/www/crossfit/website/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('get_block', Array, Array)
+#4 /var/www/crossfit/website/lib/Cake/Model/Model.php(799): DboSource->query('get_block', Array, Object(AppModel))
+#5 /var/www/crossfit/website/app/Controller/AboutusController.php(29): Model->__call('get_block', Array)
+#6 /var/www/crossfit/website/app/Controller/AboutusController.php(29): AppModel->get_block('aboutus_ourcomp...')
+#7 [internal function]: AboutusController->index()
+#8 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(AboutusController), Array)
+#9 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AboutusController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2014-05-02 07:23:37 Error: Fatal Error (4): syntax error, unexpected '?>' in [/var/www/crossfit/website/app/View/Aboutus/index.ctp, line 36]
+2014-05-02 07:23:37 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /crossfit/website/aboutus
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 36, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 36, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-02 09:28:16 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/images/left-map.jpg
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 09:38:36 Error: Fatal Error (4): syntax error, unexpected '$row_blk' (T_VARIABLE), expecting ',' or ';' in [/var/www/crossfit/website/app/View/ContactUs/index.ctp, line 22]
+2014-05-02 09:38:36 Error: [FatalErrorException] syntax error, unexpected '$row_blk' (T_VARIABLE), expecting ',' or ';'
+Request URL: /crossfit/website/contact_us
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/crossf...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/crossf...', 22, Array)
+#2 /var/www/crossfit/website/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/crossf...', 22, Array)
+#3 /var/www/crossfit/website/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-02 09:40:36 Error: [SocketException] Invalid email: "  <>"
+Request URL: /crossfit/website/contact_us
+Stack Trace:
+#0 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(570): CakeEmail->_setEmail('_from', Array, NULL)
+#1 /var/www/crossfit/website/lib/Cake/Network/Email/CakeEmail.php(356): CakeEmail->_setEmailSingle('_from', Array, NULL, 'From requires o...')
+#2 /var/www/crossfit/website/lib/Cake/Controller/Component/EmailComponent.php(294): CakeEmail->from(Array)
+#3 /var/www/crossfit/website/app/Controller/ContactUsController.php(59): EmailComponent->send('<body style="ma...')
+#4 [internal function]: ContactUsController->index()
+#5 /var/www/crossfit/website/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ContactUsController), Array)
+#6 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/crossfit/website/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ContactUsController), Object(CakeRequest), Object(CakeResponse))
+#8 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2014-05-02 10:12:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-icons_222222_256x240.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:12:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:12:02 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:12:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_65_ffffff_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_65_ffffff_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-icons_222222_256x240.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_75_e6e6e6_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:26 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-icons_222222_256x240.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:13:29 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/images/ui-bg_glass_65_ffffff_1x400.png
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.accordion.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.autocomplete.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.dialog.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.menu.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.button.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.progressbar.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.resizable.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.selectable.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.slider.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.spinner.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.tabs.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:23:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.tooltip.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:29:15 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:29:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:30:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:30:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:31:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:31:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:31:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:31:46 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:32:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:32:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:32:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.datepicker.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:32:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /crossfit/website/css/jquery.ui.core.css
+Stack Trace:
+#0 /var/www/crossfit/website/app/webroot/index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-05-02 10:51:21 Error: Fatal Error (4): syntax error, unexpected end of file in [D:\xampp\htdocs\crossfit\website\app\View\Elements\footer.ctp, line 33]
+2014-05-02 10:51:21 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /crossfit/website/
+Stack Trace:
+#0 D:\xampp\htdocs\crossfit\website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 33, Array)
+#2 D:\xampp\htdocs\crossfit\website\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 33, Array)
+#3 D:\xampp\htdocs\crossfit\website\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-05-02 10:52:37 Error: Fatal Error (4): syntax error, unexpected end of file in [D:\xampp\htdocs\crossfit\website\app\View\Elements\footer.ctp, line 33]
+2014-05-02 10:52:37 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /crossfit/website/
+Stack Trace:
+#0 D:\xampp\htdocs\crossfit\website\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\xampp\htdocs...', 33, Array)
+#2 D:\xampp\htdocs\crossfit\website\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\xampp\htdocs...', 33, Array)
+#3 D:\xampp\htdocs\crossfit\website\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

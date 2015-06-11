@@ -1,0 +1,112 @@
+<!-- Slider -->
+<section class="slider row">
+	<div class="page-mid">
+		<div class="slider-content">
+        
+        	<a class="prev" href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>prev_arrow.png" alt="" /></a>
+        	<a class="next" href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>next_arrow.png" alt="" /></a>
+        
+            <div class="imageBox">
+            
+                <div class="col mr35">     
+                	<div class="inner">  
+                    	<a href="#">         	
+                            <img src="<?php echo FRONT_END_IMAGES_PATH ?>slider_img1.png" alt="" />
+                            <span class="text">
+                                <span class="head">Packing the Coffeemaker: Albert-Dominic Larouche</span>
+                                <span class="txt">posted Fri, July 05, 2013</span>
+                                <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow.png" alt="" class="arrow" />
+                            </span>
+                        </a>
+                    </div>                
+                </div>
+
+                <div class="col">     
+                	<div class="inner">  
+                    	<a href="#">         	
+                            <img src="<?php echo FRONT_END_IMAGES_PATH ?>slider_img2.png" alt="" />
+                            <span class="text">
+                                <span class="head">Packing the Coffeemaker: Albert-Dominic Larouche</span>
+                                <span class="txt">posted Fri, July 05, 2013</span>
+                                <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow.png" alt="" class="arrow" />
+                            </span>
+                        </a>
+                    </div>                
+                </div>
+
+                <div class="col mr35 mt30">     
+                	<div class="inner">  
+                    	<a href="#">         	
+                            <img src="<?php echo FRONT_END_IMAGES_PATH ?>slider_img3.png" alt="" />
+                            <span class="text">
+                                <span class="head">Packing the Coffeemaker: Albert-Dominic Larouche</span>
+                                <span class="txt">posted Fri, July 05, 2013</span>
+                                <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow.png" alt="" class="arrow" />
+                            </span>
+                        </a>
+                    </div>                
+                </div>
+
+                <div class="col mr35 mt30">     
+                	<div class="inner">  
+                    	<a href="#">         	
+                            <img src="<?php echo FRONT_END_IMAGES_PATH ?>slider_img4.png" alt="" />
+                            <span class="text">
+                                <span class="head">Packing the Coffeemaker: Albert-Dominic Larouche</span>
+                                <span class="txt">posted Fri, July 05, 2013</span>
+                                <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow.png" alt="" class="arrow" />
+                            </span>
+                        </a>
+                    </div>                
+                </div>
+
+                <div class="col mt30">     
+                	<div class="inner">  
+                    	<a href="#">         	
+                            <img src="<?php echo FRONT_END_IMAGES_PATH ?>slider_img5.png" alt="" />
+                            <span class="text">
+                                <span class="head">Packing the Coffeemaker: Albert-Dominic Larouche</span>
+                                <span class="txt">posted Fri, July 05, 2013</span>
+                                <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow.png" alt="" class="arrow" />
+                            </span>
+                        </a>
+                    </div>                
+                </div>
+
+            </div>                
+            
+		</div>
+	</div>
+	<div class="slider-timeline"> 
+		<div class="page-mid">
+			<ul class="timelnr-mnths">
+				<li> <a href="#"> January</a> </li>
+				<li> <a href="#"> February</a> </li>
+				<li> <a href="#"> March</a> </li>
+				<li> <a href="#"> April</a> </li>
+				<li> <a href="#"> May</a> </li>
+				<li> <a href="#"> June</a> </li>
+				<li> <a href="#"> July</a> </li>
+				<li> <a href="#"> August</a> </li>
+			</ul>
+			<ul class="timelnr-list"> 
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li class="active"> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+				<li> <a href="#"><img src="<?php echo FRONT_END_IMAGES_PATH ?>tln-1.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- Slider End -->

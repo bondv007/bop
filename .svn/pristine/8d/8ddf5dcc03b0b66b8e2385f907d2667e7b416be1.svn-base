@@ -1,0 +1,74 @@
+	<!-- Slider -->
+	<section class="athlt-profile-top row">
+		<div class="page-mid">
+			
+			
+            
+		</div>
+	</section>
+	<!-- Slider End -->
+	
+	<!-- MId Section -->
+	<section class="body-content-bg ptb25 row">
+		<div class="page-mid">
+			<div class="body-content-mn row mt10">
+				
+				<div class="row">
+					<div class="register-columns">
+						<div class="column">
+							<div class="header">
+								<h3>Manage Badges </h3>
+								<div class="blue save-btn">								
+                                  <div class="submit">																 
+										<div class="blue">
+												<button onclick="window.location.href='<?php echo $this->webroot.'affiliate/add_badge'; ?>'" type="submit" style="float:right;">Add Badge</button>
+										 </div>
+									</div>  
+								</div>								  
+								
+							</div>
+						</div>		
+					</div>	
+					<div class="list-tabing">						
+						
+						<div class="tab-content minhgt_300">
+							<div id="competitions" class="tab-content-list">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>		
+										<th scope="col" width="50">S.No.</th>
+										
+										<th scope="col"><?php echo $this->Paginator->sort('Badge.photo','Image'); ?></th>
+										<th scope="col"><?php echo $this->Paginator->sort('Badge.title','Title'); ?></th>
+										<th scope="col"><?php echo $this->Paginator->sort('Badge.link','Link'); ?></th>										
+									</tr>
+									
+								<?php 
+									if ( !empty($badges) ){
+									$i=1;		
+									foreach($badges as $ev) { ?>
+									<tr>
+										<td><?php echo $i; ?></td>
+										<td><img src="<?php echo $this->webroot.'files/badges/'.$ev['Badge']['id'].'/thumb_'.$ev['Badge']['photo']; ?>" alt="" title="<?php echo $ev['Badge']['title']; ?>" /></td>
+										<td><?php echo $ev['Badge']['title']; ?></td>
+										<td><?php echo $ev['Badge']['link']; ?></td>
+												
+									</tr>
+									<?php $i++; }}else{ ?>
+									
+									<tr>
+										<td colspan="4">No Badges Found</td>
+									</tr>
+									
+									<?php } ?>
+								</table>
+							</div>
+
+						</div>
+					
+					</div>
+					
+			</div>
+		</div>
+	</section>
+	<!-- MId Section End -->
+

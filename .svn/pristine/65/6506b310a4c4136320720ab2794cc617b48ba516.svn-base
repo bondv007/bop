@@ -1,0 +1,88 @@
+<?php 
+
+App::uses('Controller', 'Controller');
+
+/**
+ * Challenges Controller
+ *
+ * Purpose : Manage Challenges
+ * @project Crossfit
+ * @since 7 July 2014
+ * @version Cake Php 2.3.8
+ * @author : Vivek Sharma
+ */
+ 
+class ChallengesController extends AppController 
+{
+	public $name = 'Challenges';
+	public $components = array('RequestHandler');
+	public $uses = array('Challenge', 'User', 'Wod', 'WodMovement', 'Movement', 'WodType', 'Category');
+	
+	public function beforeFilter()
+	{		
+		parent::beforeFilter();
+		
+	}
+	
+	
+	/**
+	 * Method Name : challenege_user
+	 * Author Name : Vivek Sharma
+	 * Date : 7 July 2014
+	 * Description : challenge an athlete
+	 */
+	 public function challenge_user($user_id)
+	 {
+		$athlete = $this->User->find('first', array('conditions' => array('User.id' => $user_id),
+													'User.first_name', 'User.last_name', 'User.username'));
+													
+		$this->set('athlete', $athlete);
+		
+		// get WOD category list
+		$categories = $this->Category->find('list',array('conditions' => array('Category.type' => 'wod') ));
+		
+		// get WOD types list
+		$types = $this->WodType->find('list',array('conditions' => array('WodType.parent_id' => 0) ) );
+		
+		// get movements list
+		$movements = $this->Movement->find('list');
+		
+		
+		$this->Wod->recursive = 2;
+		$this->WodMovement->bindModel(array('belongsTo'=>array('Movement'=>array('className'=>'Movement','foreignKey'=>'movement_id'))));
+		$this->Wod->bindModel(array('hasMany'=>array('WodMovement'=>array('className'=>'WodMovement','foreignKey'=>'wod_id'))));
+		$wods = $this->Wod->find('all',array('order' => array('Wod.title'=>'asc'),
+											'conditions' => array('Wod.wod_save_type' => '1')));
+		
+		$this->set('wods',$wods);
+		
+		$this->set(compact('categories','types', 'movements'));
+		
+		$this->render('challenge_user');		 		
+	 }
+
+
+ 	/**
+	 * Method Name : get_wod_details
+	 * Author Name : Vivek Sharma
+	 * Date : 21 May 2014
+	 * Description : used to display wod details and movements
+	 */
+	 public function get_wod_details()
+	 {
+			$this->layout = 'ajax';
+			$wod_id = $this->data['wod_id'];
+			
+			$this->Wod->recursive = 2;
+			$this->WodMovement->bindModel(array('belongsTo'=>array('Movement'=>array('className'=>'Movement','foreignKey'=>'movement_id'))));
+			$this->Wod->bindModel(array('hasMany'=>array('WodMovement'=>array('className'=>'WodMovement','foreignKey'=>'wod_id'))));
+			$wod = $this->Wod->find('first',array('conditions'=>array('Wod.id'=>$wod_id)));
+			
+			$this->set('wod',$wod);	
+			$this->set('ctr',$this->data['ctr']);
+			$this->set('div',$this->data['div']);	
+			$this->render('wod_details');	
+	 }
+	 
+}
+	 	

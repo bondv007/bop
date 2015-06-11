@@ -1,0 +1,140 @@
+<?php
+	echo $this->Html->script('jquery-ui.custom'); 
+	echo $this->Html->css(array('jquery-ui.custom')); 
+ ?>
+ 
+	<!-- MId Section -->
+	<section class="body-content-bg ptb25 row">
+		<div class="page-mid">
+			<div class="body-content-mn row mt10">
+				<div class="row">
+					<div class="register-columns regsiter-2">
+						<div class="right-column column sponcers">
+							<div class="inlineRow">
+								<div class="header">
+									<h3>Recommended Events</h3>
+								</div>
+
+								<div class="column-body">
+									<div class="event">
+										<div class="image">
+											<img src="<?php echo $this->webroot; ?>images/event.jpg" alt="">
+											<span class="black-trans">Outlaw CrossFit</span>
+											<a href="javascript:void(0)" class="register">Register</a>
+										</div>
+										<div class="dated">January 2, 2014</div>
+									</div>
+
+									<div class="event">
+										<div class="image">
+											<img src="<?php echo $this->webroot; ?>images/event-2.jpg" alt="">
+											<span class="black-trans">Potomac CrossFit</span>
+											<a href="javascript:void(0)" class="register">Register</a>
+										</div>
+										<div class="dated">January 2, 2014</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div><!--.right-column-->
+
+						<div class="left-column column">
+							<div class="inlineRow">
+								<div class="header">
+									<h3>Individual Registration</h3>
+									<a href="javascript:void(0)" class="back">BACK</a>
+									<div class="clear"></div>
+								</div>
+
+								<div class="column-body">
+									<div class="form-container">
+										<?php echo $this->Form->create('Payment',array('id' => 'PaymentForm')); ?>
+										
+										<?php echo $this->Form->input('register_id', array('type' => 'hidden', 'value' => $details['EventRegistration']['id'])); ?>
+											<ul class="four-columns">
+												<li class="column">
+													<label class="nowrap">Card Number</label>
+													<input type="text" class="required number" name="date[Payment][card][1]" />
+												</li>
+												<li class="column">
+													<input type="text" class="required number" name="date[Payment][card][2]">
+												</li>
+												<li class="column">
+													<input type="text" class="required number" name="date[Payment][card][3]">
+												</li>
+												<li class="column">
+													<input type="text" class="required number" name="date[Payment][card][4]">
+												</li>
+											</ul>
+											<ul>
+												<li>
+													<label>Name on the Card</label>
+													<input type="text" class="required" name="date[Payment][name]"> 
+												</li>
+											</ul>
+											<ul class="two-columns clear-after">
+												<li class="with-calendar">
+													<label>Expiration Date</label>
+													<input type="text" placeholder="Select a date range" class="required datepick" name="date[Payment][expire_date]">
+													<a href="javascript:void(0)" class="calendar" style="background:no-repeat"><img src="<?php echo $this->webroot; ?>images/calendar.png" alt="" style="margin-left: -29px;margin-top: -4px;"></a>
+												</li>
+											</ul>
+											<ul class="four-columns clear-after">
+												<li class="column">
+													<label>CSV</label>
+													<input type="text" class="required number" name="date[Payment][cvv]">
+												</li>
+											</ul>
+											<div class="buttons-section">
+												<button class="blue_btn" type="submit" id="payment_submit">Submit</button>
+											</div>
+										<?php echo $this->Form->end(); ?>
+									</div>
+
+									<div class="costing">
+										<h3>Competition Costs</h3>
+									
+										<div class="cost">
+											
+										<?php
+											$total = 0;
+											if(!empty($details['Eventprice'])){ 									
+												foreach($details['Eventprice'] as $price) {
+										?>
+										<dl>
+											<dt><?php if($price['date'] == date('Y-m-d')) echo 'Today'; else echo 'By '.formatDate($price['date']); ?></dt> 
+											<dd><?php echo '$'.$price['price']; ?> </dd>
+										</dl>
+																   
+										<?php $total += $price['price']; }} ?>
+											
+										</div>
+
+										<div class="total">
+											<dl>
+												<dt>Total Cost</dt>
+												<dd><?php echo '$'.$total; ?></dd>
+											</dl>
+										</div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div><!--.left-column-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- MId Section End -->
+
+<script type = "text/javascript">
+
+$(document).ready(function(){
+	
+	$('.datepick').datepicker({ minDate: 0 , dateFormat:"yy-mm-dd", changeMonth: true, changeYear: true });	
+		
+});
+
+</script>	

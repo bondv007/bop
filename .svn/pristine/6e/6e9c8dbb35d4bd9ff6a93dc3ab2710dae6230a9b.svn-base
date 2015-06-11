@@ -1,0 +1,89 @@
+<?php 
+	echo $this->Html->script(array('jquery.ui.core', 'jquery.ui.datepicker'), array('inline' => false));
+
+	$this->append('css');
+		echo $this->Html->css(array('jquery.ui.core', 'jquery.ui.datepicker', 'jquery.ui.theme'));
+	$this->end();
+?>
+<script>
+	$(document).ready(function(){
+		$("#ContactUsSponsorshipInquiryForm").validate({
+			rules:{
+				recaptcha_response_field: {
+					required: true
+				}
+			},
+			submitHandler: function(frm){
+				$(frm).find('input[type=submit],button[type=submit]').attr('disabled', 'disabled');
+				$(frm).submit();
+			}
+		});
+		
+		$(".datepicker").datepicker({ minDate: new Date() });
+	})
+</script>
+
+	<!-- Slider -->
+	<section class="athlt-profile-top row">
+		<div class="page-mid events-map">
+			<div class="row">
+				<div class="contact mb60">
+                	<h1>Sponsorship Inquiries </h1>
+               	<?php 
+					if(!empty($row_blk_top['Block']['content']))
+					{
+						echo '<p>'.$row_blk_top['Block']['content'].'</p>';
+					}
+				?>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!-- Slider End -->
+	
+	<!-- MId Section -->
+	<section class="body-content-bg ptb25 row">
+		<div class="page-mid event-colum">
+		<?php echo $this->Xicom->display_errors($errors); ?>
+             <!--right contact form-->
+             	<div class="contact-form sponsr">
+                <div class="leaderboard">
+                	<h2> Sponsorship Inquiry Form </h2>
+                </div>
+                <div class="clear"></div>
+					<div id="cntct-detail">
+                <?php
+					echo $this->Form->create('ContactUs', array('url' => $this->Html->url( null, true ), 'inputDefaults' => array('label' => false, 'div' => false, 'error' => false)));
+				?>	
+                        <div class="area"> <?php echo $this->Form->label('first_name', __('First Name'));?> <br/>
+                        	<?php echo $this->Form->input('first_name', array('class' => 'required', 'type' => 'text')); ?>
+                        </div>
+                        <div class="area pull-right"> <?php echo $this->Form->label('last_name', __('Last Name'));?> <br/>
+                        	<?php echo $this->Form->input('last_name', array('class' => 'required', 'type' => 'text')); ?>
+                        </div>
+                    	<div class="area"> <?php echo $this->Form->label('email_id', __('Email Address'));?> <br/>
+                        	<?php echo $this->Form->input('email_id', array('class' => 'required email', 'type' => 'text')); ?>
+                        </div>
+                    	<div class="area pull-right">
+                        	<?php echo $this->Form->label('sponsorship_type', __('Sponsorship for'));?><br/>
+                        	<?php echo $this->Form->input('sponsorship_type', array('class'=>'required', 'options' => $ARR_SPONSORSHIP_TYPE) )?>
+                        </div>
+						<div class="clear"></div>
+                        <div class="area"> <?php echo $this->Form->label('event_date', __('Date of the event'));?> <br/>
+                        	<?php echo $this->Form->input('event_date', array('class' => 'required datepicker', 'type' => 'text')); ?>
+                        </div>
+                        <div class="area messge"><?php echo $this->Form->label('message', __('Message'), array('class' => 'messge')); ?><br/>
+							<?php echo $this->Form->textarea('message', array('class' => 'required' )); ?>
+                        </div>
+                        
+						<div class="clear"></div>
+                       <input type="submit" value="SUBMIT" class="rgist-btn">
+                        <div class="clear"></div>
+                    </form>
+                    </div>
+                </div>
+             
+             <!--right contact form End -->
+        </div>
+	</section>
+	<!-- MId Section End -->

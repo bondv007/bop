@@ -1,0 +1,130 @@
+<?php echo $this->element('slider'); ?>
+<section class="body-content-bg ptb25 row">
+	<div class="page-mid">
+		<div class="body-content-mn row mt10">
+			<div class="body-content-mn-left">
+				<div class="body-content-box-1 mb40 height288">
+					<div class="box-1-head">
+						<div class="disp-tCell"><span> Competitions </span> <a href="#" class="more"> <span class="more-a">More</span> <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow-right.png" alt=""></a></div>
+					</div>
+					<div class="box-1-body disp-tRow">
+						<div class="disp-tCell">
+							<ul class="compition-sBox mt10">
+								<li>
+									<div class="row">
+										<div class="boxImage tCenter row"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>comp-1.png" alt=""> </div>
+										<div class="boxCont row">
+											<h3>San Francisco CrossFit,</h3>
+											<p>Muscle Mash </p>
+											<span> Jan. 6, 2013</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="row">
+										<div class="boxImage tCenter row"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>comp-2.png" alt=""> </div>
+										<div class="boxCont row">
+											<h3>LAX CrossFit,</h3>
+											<p>Muscle Mash </p>
+											<span> Jan. 6, 2013</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="row">
+										<div class="boxImage tCenter row"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>comp-3.png" alt=""> </div>
+										<div class="boxCont row">
+											<h3>CrossFit Reign,</h3>
+											<p>Muscle Mash </p>
+											<span> Jan. 6, 2013</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="row tCenter">
+								<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>sDots.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-content-box-1 mb40 bg-box-pat height322">
+					<div class="box-1-head">
+						<div class="disp-tCell"><span> ThrowDowns </span> <a href="#" class="more"> <span class="more-a">More</span> <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow-right.png" alt=""></a></div>
+					</div>
+					<div class="box-1-body disp-tRow">
+						<div class="disp-tCell">
+							<ul class="thrw-sBox mt10">
+								<li>
+									<div class="row">
+										<div class="boxVScont row">
+											<span> <img src="<?php echo FRONT_END_IMAGES_PATH ?>thrw-1.png" alt=""> </span>
+											<span> <img src="<?php echo FRONT_END_IMAGES_PATH ?>thrw-2.png" alt=""> </span>
+										</div>
+										<div class="boxCont">
+											<h3>CrossFit Oahu vs. CrossFit Hard To Kill</h3>
+											<span>Jan. 12, 2013 @ CrossFit Oahu</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="row tCenter mt10">
+								<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>sDots1.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-content-box-1 mb40 bg-box-pat height322">
+					<div class="box-1-head">
+						<div class="disp-tCell"><span> Challenges </span> <a href="#" class="more"> <span class="more-a">More</span> <img src="<?php echo FRONT_END_IMAGES_PATH ?>arrow-right.png" alt=""></a></div>
+					</div>
+					<div class="box-1-body disp-tRow">
+						<div class="disp-tCell">
+							<ul class="challenge-sBox mt10">
+								<li>
+									<div class="row">
+										<div class="boxVScont row">
+											<img src="<?php echo FRONT_END_IMAGES_PATH ?>chl1.png" alt="">
+											<img src="<?php echo FRONT_END_IMAGES_PATH ?>chl1.2.png" alt="">
+										</div>
+										<div class="boxCont">
+											<h3>Rich Froning vs. Steve Panchik</h3>
+											<p>“Diane” </p>
+											<span> Jan. 8, 2013 @ Rich’s House</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="row">
+										<div class="boxVScont row">
+											<img src="<?php echo FRONT_END_IMAGES_PATH ?>chl2.png" alt="">
+											<img src="<?php echo FRONT_END_IMAGES_PATH ?>chl2.2.png" alt="">
+										</div>
+										<div class="boxCont">
+											<h3>Jane Doe vs. Jill Doe</h3>
+											<p>“Doe Girls WOD” </p>
+											<span> Jan. 8, 2013 @ Rich’s House</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="row tCenter">
+								<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>sDots1.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body-content-mn-right">
+				<div class="row mb40">
+					<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>add1.png" class="row" alt=""></a>
+				</div>
+				<div class="row mb40">
+					<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>add2.png" class="row" alt=""></a>
+				</div>
+				<div class="row mb40">
+					<a href="#"> <img src="<?php echo FRONT_END_IMAGES_PATH ?>add3.png" class="row" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

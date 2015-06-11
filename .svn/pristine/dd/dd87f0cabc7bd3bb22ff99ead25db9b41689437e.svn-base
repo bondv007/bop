@@ -1,0 +1,85 @@
+<?php 
+
+App::uses('Controller', 'Controller');
+
+/**
+ * Info Controller
+ *
+ * Purpose : Manage info pages
+ * @project Crossfot
+ * @since 24 June, 2014
+ * @version Cake Php 2.3.8
+ * @author : Vivek Sharma
+ */
+class InfoController extends AppController 
+{
+	
+	public function beforeFilter()
+	{
+		parent::beforeFilter();
+		$this->layout = 'default';
+	}
+	
+	 /**
+	 * Method Name : help	 
+	 * Author Name : Vivek Sharma
+	 * Date : 24 June 2014
+	 * Description : show help popup 
+	 */
+	 public function help()
+	 {
+		$this->layout = 'ajax';
+		$this->render('help');	
+	 }
+	 
+	 /**
+	 * Method Name : faq	 
+	 * Author Name : Vivek Sharma
+	 * Date : 24 June 2014
+	 * Description : show faq 
+	 */
+	 public function faq()
+	 {
+		$this->loadModel('Faq');		
+		
+		$conditions = array();
+		
+		if ( !empty($this->request->data) )
+		{
+			if ( $this->data['faq_search_type'] == '1' )
+			{	
+				$conditions[] = array('Faq.question LIKE ' =>  "%".trim($this->data['faq_keyword'])."%");									
+			} else if ( $this->data['faq_search_type'] == '2' )
+			{
+				$conditions[] = array('Faq.answer LIKE ' =>  "%".trim($this->data['faq_keyword'])."%");	
+			} else {
+				$conditions['OR'][] = array('Faq.question LIKE ' =>  "%".trim($this->data['faq_keyword'])."%");	
+				$conditions['OR'][] = array('Faq.answer LIKE ' =>  "%".trim($this->data['faq_keyword'])."%");	
+			}
+			
+			$this->set('faq_type', $this->data['faq_search_type']);
+			$this->set('faq_keyword', $this->data['faq_keyword']);
+		}
+		
+		$questions = $this->Faq->find('all', array('conditions' => $conditions));
+		$this->set('questions', $questions);	
+		$this->render('faq');	
+	 }
+	 
+	 /**
+	 * Method Name : tutorials	 
+	 * Author Name : Vivek Sharma
+	 * Date : 24 June 2014
+	 * Description : show tutorials
+	 */
+	 public function tutorials()
+	 {
+	 	$this->loadModel('Tutorial');
+		$this->render('tutorials');
+	 }
+
+
+	
+		
+}
+	

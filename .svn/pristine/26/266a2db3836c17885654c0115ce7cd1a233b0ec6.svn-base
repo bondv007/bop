@@ -1,0 +1,78 @@
+<header class="header row">
+	<div class="page-mid">
+		<?php
+			echo $this->Html->link($this->Html->image(FRONT_END_IMAGES_PATH.'logo.png', array('width' => '104','height' => '94')), '/', array('escape' => false) );
+		?>	
+		<div class="fRight head-right">
+			<ul class="links">
+				<?php 
+				if ( $SESS_LOGGEDIN )
+				{
+					?>					
+					<li><a href="#">Subscribe</a></li>
+					<li><a href="<?php echo $this->webroot.'users/profile'; ?>"><?php echo $this->Session->read('Auth.User.first_name'); ?></a></li>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')) ?>">Logout</a></li>
+					<?php
+				}
+				else 
+				{
+					?>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'register')) ?>">Register</a></li>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ?>">Login</a></li>
+					<li><a href="#">Subscribe</a></li>
+					<?php
+				}
+				?>
+				
+			</ul>
+			
+			<div class="search-box">
+				<input type="text" placeholder="Search...">
+				<input type="submit">
+			</div>
+			
+		</div>
+	</div>
+	<nav class="main-menu row sepadd">
+		<div class="page-mid">
+			<ul>
+				<li class="<?php echo (($this->params['controller'] == 'pages' && $this->params['action'] == 'display')?'active':'') ?>"><?php echo $this->Html->link('Home', '/') ?></li>
+				<li class="<?php echo (($this->params['controller'] == 'events' && $this->params['action'] == 'index')?'active':'') ?>"><?php echo $this->Html->link('Events', array('controller' => 'events', 'action' => 'index')) ?></li>
+				<li class="<?php echo (($this->params['controller'] == 'leaderboard')?'active':'') ?>"><?php echo $this->Html->link('Leaderboard', array('controller' => 'leaderboard')) ?></li>
+				<li><a href="#">Athletes</a></li>
+				<li><a href="#">Affiliates</a></li>
+				<li class="<?php echo (($this->params['controller'] == 'aboutus' && $this->params['action'] == 'index')?'active':'') ?>"><?php echo $this->Html->link('About', array('controller' => 'aboutus'), array('escape' => false)) ?></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<?php if($this->params['controller'] == 'events' &&  $this->params['action'] == 'create_event'){ ?>
+		
+	<nav class="row">
+        	<div class="page-mid">
+            	<div class="blue">
+                	<button type="submit" onclick="window.location.href='<?php echo $this->webroot.'users'; ?>'">Back to Dashboard</button>
+                </div>
+
+                <div class="select-box pull-right">
+					<span class="select big inlineBlock">
+						<select class="box-sizing">
+							<option> Items </option>
+							<option> Items 1</option>
+							<option> Items 2</option>
+						</select>
+					</span>
+					<span class="select small inlineBlock">
+						<select class="box-sizing">
+							<option> Settings </option>
+							<option> Items 1</option>
+							<option> Items 2</option>
+						</select>
+					</span>
+                    <a href="javascript:void(0);"> <i class="setting icon"></i> </a>
+                </div>
+            </div>
+        </nav>	
+		
+	<?php } ?>
+</header>

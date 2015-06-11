@@ -1,0 +1,9 @@
+<div class="reply_msg">
+<?php echo $message['Message']['message']; ?>	
+</div>
+<div class="reply_form">
+	<div class="fRight posRel">
+		<textarea></textarea>
+		<a class="post" href="javascript://">POST</a>
+	</div>
+</div>

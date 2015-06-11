@@ -1,0 +1,218 @@
+<?php 
+
+App::uses('Controller', 'Controller');
+
+/**
+ * Athlete Controller
+ *
+ * Purpose : Manage Athlete
+ * @project Crossfit
+ * @since 29 July 2014
+ * @version Cake Php 2.3.8
+ * @author : Vivek Sharma
+ */
+ 
+class AthleteController extends AppController 
+{
+	public $name = 'Athlete';
+	public $components = array('RequestHandler','Uploader');
+	public $helpers = array('Html', 'Form', 'Js');
+	public $uses = array('User','AthleteProfile','Region','Athlete','Badge');
+	
+	public function beforeFilter()
+	{		
+		parent::beforeFilter();	
+			
+	}
+	
+	
+	/**
+	 * Method Name : manage_profile	 
+	 * Author Name : Vivek Sharma
+	 * Date : 29 July 2014
+	 * Description : used to manage athlete profile
+	 */
+	 public function manage_profile()
+	 {
+		if ( !empty($this->request->data) )
+		{	
+			$data = $this->data;
+			//pr($data); die;
+			$username_exist = $this->User->find('count', array('conditions' => array('User.username' => $data['User']['username'],
+																						'User.id != ' => $data['User']['id'])));
+			
+			if(empty($username_exist))
+			{
+				if ( empty($data['AthleteProfile']['id']) )
+				{
+					$this->AthleteProfile->create();	
+				
+				} else {
+					
+					$data['AthleteProfile']['last_modified'] = date('Y-m-d H:i:s');
+					$this->AthleteProfile->id = $data['AthleteProfile']['id'];
+				}
+							
+				$this->AthleteProfile->save($data['AthleteProfile']);
+				
+				if ( isset($data['User']['photo']) )
+				{
+					if ( empty($data['User']['photo']) || empty($data['User']['photo']['tmp_name']) || $data['User']['photo']['size'] <= 0)
+					{
+						unset($data['User']['photo']);
+							
+					}else{
+						
+						$image = $data['User']['photo'];
+						unset($data['User']['photo']);
+					}					
+				}
+				
+				$this->User->id = $data['User']['id'];
+				$this->User->save($data['User']);
+				
+				if ( isset($image) )
+				{
+					$image_array = $image;
+					$user_id = $data['User']['id'];
+					$image_info = pathinfo($image_array['name']);
+					$image_new_name = $image_info['filename'].time().'_'.$user_id;
+					
+					
+					$dest_dir = WWW_ROOT.'files/'.$user_id; 
+					
+					if (!is_dir($dest_dir))
+					{
+						mkdir($dest_dir, 0777);
+					}
+					$dest_dir = $dest_dir.DS;
+					$thumbnails = Thumbnail::user_profile_thumbs();	
+					$params = array('size'=>'500');
+					$size_dimensions = array('width'=>20, 'height'=>20);	
+					$this->Uploader->upload($image_array, $dest_dir , array(), $image_new_name, $params, $size_dimensions);	
+					
+					if ( $this->Uploader->error )
+					{
+						$file_error = $this->Uploader->errorMessage;
+						
+						$this->Session->setFlash(__('Error occured while uploading image'),'default',array(),'error');
+						$this->Session->setFlash(__($file_error, 'error-messages' ),'default',array(),'error');	
+					}else{
+						$image_new_name = $this->Uploader->filename;
+						$source_path = WWW_ROOT.'files'.DS.$user_id.DS.$image_new_name;
+						$filedata = array(
+							'source_path' => $source_path,
+							'dest_dir' => $dest_dir,
+							'file_name' => $image_new_name
+						);
+						$file_dimension = array(
+							'width' => $this->request->data['w'],
+							'height' => $this->request->data['h'],
+							'x' => $this->request->data['x'],
+							'y' => $this->request->data['y']
+						);
+						//pr($filedata); die;
+						$this->Uploader->crop( $filedata, $file_dimension, $thumbnails , array('remove'=>false) );
+					}
+					
+					$this->User->id = $data['User']['id'];
+					$this->User->saveField('photo',$this->Uploader->filename);
+				}
+				
+				
+				$this->redirect(array('controller' => 'users', 'action' => 'profile'));
+			}else{
+				
+				
+				$this->Session->setFlash(__('Username already exist.'),'default',array(),'error');
+			}
+									
+		} 		 
+		 
+		$user_id = $this->Auth->user('id');
+	
+		$this->User->bindModel(array('hasOne' => array('AthleteProfile' => array('className' => 'AthleteProfile', 'foreignKey' => 'user_id'))));
+		$user = $this->User->find('first', array('conditions' => array('User.id' => $user_id)));		
+	
+		$regions = array();		
+				
+		$regions = $this->Region->find('list',array('order' => array('Region.name' => 'asc')));
+		
+		$this->request->data = $user; 
+		
+		$this->set('athlete_profile_id',$user['AthleteProfile']['id']);
+		$this->set('regions', $regions);				
+		$this->set('user', $user);	
+		
+		$this->render('manage_profile');				
+					
+	 }	 
+
+	 /**
+	 * Method Name : manage_badges	 
+	 * Author Name : Vivek Sharma
+	 * Date : 29 July 2014
+	 * Description : used to manage badges
+	 */
+	 public function manage_badges()
+	 {
+		
+		$this->paginate = array(
+							'conditions' => array('Badge.user_id' => $this->Auth->user('id')),
+							'limit' => '20'							
+						);
+		
+		$badges = $this->paginate('Badge');
+		$this->set('badges', $badges);
+		$this->render('manage_badges');
+	 } 
+	 
+	 /**
+	 * Method Name : add_badge	 
+	 * Author Name : Vivek Sharma
+	 * Date : 29 July 2014
+	 * Description : used to add a new badge
+	 */
+	 public function add_badge()
+	 {
+	 	if ( !empty($this->request->data) )
+		{
+			$this->Badge->create();
+			if($badge = $this->Badge->save($this->data))
+			{
+				$this->Session->setFlash(__('New Badge saved.'),'default',array(),'success');
+				$this->redirect(array('action' => 'manage_badges'));
+			}else{
+				$this->Session->setFlash(__('Badge not saved.'),'default',array(),'error');
+			}		
+		}
+	 	$this->set('user_id',$this->Auth->user('id'));
+	 	$this->render('add_badge');
+	 }
+	 
+	 /**
+	 * Method Name : delete_badge	 
+	 * Author Name : Vivek Sharma
+	 * Date : 29 July 2014
+	 * Description : delete badge
+	 */
+	 public function delete_badge($id)
+	 {
+	 	if ( !empty($id) )
+		{
+			$badge = $this->Badge->findById($id);
+			if ( !empty($badge) )
+			{
+				$this->Badge->delete($id);
+				unlink($this->webroot.'files/badges/'.$id);
+				$this->Session->setFlash(__('Badge removed successfully.'),'default',array(),'success');
+			}else{
+				$this->Session->setFlash(__('Badge not found.'),'default',array(),'error');
+			}
+		}else{
+			$this->Session->setFlash(__('Invalid request.'),'default',array(),'error');
+		}
+		$this->redirect($this->referer());
+	 }
+	 
+}

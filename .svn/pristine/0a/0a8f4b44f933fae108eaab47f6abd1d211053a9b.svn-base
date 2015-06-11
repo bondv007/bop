@@ -1,0 +1,64 @@
+$(document).ready(function() {
+	
+	//Register form validation
+	$("#register_button").click(function(){
+    		$('#userSignUp').validate({
+            submitHandler: function(form) {                
+                form.submit();
+            }   
+        });
+	});
+	
+	//Login form validation
+	$("#login_btn").click(function(){
+    		$('#UserLoginForm').validate({
+            submitHandler: function(form) {                
+                form.submit();
+            }   
+        });
+	});
+	
+	//Forgot password form validation
+	$("#forgot_password_btn").click(function(){
+    		$('#UserForgotPasswordForm').validate({
+            submitHandler: function(form) {                
+                form.submit();
+            }   
+        });
+	});
+
+	//Update password form validation
+	$( "#UserUpdatePasswordForm" ).validate({
+		rules: {
+			"data[User][password]": {
+			required: true,
+			minlength: 4
+			},
+			"data[User][confirm_password]" : {
+                    minlength : 4,
+                    equalTo : "#UserPassword"
+                }
+		}
+	});
+	
+	//Twitter email update form validation
+	$("#twitter_login_btn").click(function(){
+    		$('#UserTwitterEmailForm').validate({
+            submitHandler: function(form) {                
+                form.submit();
+            }   
+        });
+	});
+	
+	//Event create form validation
+	$("#save_event").click(function(){		
+    		$('#CreateEventForm').validate({
+				submitHandler: function(form) 
+				{                
+					form.submit();
+				}   
+        });
+	});	
+	
+	
+})

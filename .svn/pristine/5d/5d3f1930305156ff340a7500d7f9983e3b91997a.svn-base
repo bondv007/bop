@@ -1,0 +1,277 @@
+<?php $this->Html->script(array('ckeditor/ckeditor'), array('inline'=>false));?>
+
+<style>
+.mov_value label.error{   float: left;  margin-left: -106px;  margin-top: -25px; position: absolute;}
+</style>
+
+<div class="loginpopup custom_wod_popup register" style="display:none;">
+    	<span class="overlay"></span>
+        <div class="loginBox createEvent addWod">
+            <div class="logininner clearfix">
+                <a class="close" href="javascript://" onclick="close_form();"><img src="<?php echo $this->webroot; ?>images/close_btn.png" alt=""></a>
+                
+                <h2>Add WOD Dictionary</h2>            
+                    
+                <?php echo $this->Form->create('Wod',array('id' => 'AddWodForm')); ?>
+                    
+                    <?php 
+						echo $this->Form->input('div',array('type' => 'hidden')); 
+						echo $this->Form->input('ctr',array('type' => 'hidden')); 
+						echo $this->Form->input('num',array('type' => 'hidden')); 
+						echo $this->Form->input('division',array('type' => 'hidden')); 
+						echo $this->Form->input('division_sex',array('type' => 'hidden')); 
+                    ?>
+                    <div class="col">
+                      <div class="wodDictionory"> 
+                       <?php 
+							echo $this->Form->label('title','Title'); 
+							echo $this->Form->input('title',array('class' => 'required mr10', 'placeholder' => 'Enter Title', 'label' => false, 'error' => false, 'div' => false)); 
+                        ?>                      	
+					  </div>
+                      
+                      <div class="wodDictionory"> 
+                      	<?php 
+							echo $this->Form->label('type_id','Wod Type'); 
+							echo $this->Form->input('type_id',array('class' => 'required','type'=>'select','empty' => 'Please select','options' => $types, 'label' => false, 'error' => false, 'div' => false)); 
+                        ?>  
+					  </div>
+                      
+                      
+                      
+                      <div class="wodDictionory"> 
+                      	<?php 
+							echo $this->Form->label('rounds','Number of rounds'); 
+							echo $this->Form->input('rounds',array('class' => 'required number mr10', 'label' => false, 'error' => false, 'div' => false));
+                        ?>
+					  </div>
+                      
+                      
+                      <div class="wodDictionory"> 
+                      	<?php 
+							echo $this->Form->label('description','Description'); 
+							echo $this->Form->input('description',array('class' => 'required','type'=>'textarea', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 357px;'));
+                        ?>
+					  </div>            
+                            
+                    </div>
+                    
+                    <div class="col right">
+                        
+                      
+                      <div class="wodDictionory"> 
+                      <?php 
+							echo $this->Form->label('category_id','WOD categories'); 
+							echo $this->Form->input('category_id',array('class' => 'required','type'=>'select','empty' => 'Please select','options' => $categories, 'label' => false, 'error' => false, 'div' => false)); 
+                        ?> 
+					  </div>
+                      
+                      <div class="wodDictionory"> 
+                      <?php 
+							echo $this->Form->label('sub_type','WOD Subtype'); 
+							echo $this->Form->input('sub_type',array('class' => 'required','type'=>'select','empty' => 'Please select', 'label' => false, 'error' => false, 'div' => false)); 
+                        ?> 
+					  </div>
+                      
+                      <div class="wodDictionory mb30"> 
+                       <?php 
+							echo $this->Form->label('result_type','Result based on'); 
+							echo $this->Form->input('result_type', array(
+								'between' => '  ',
+								'separator' => ' ',
+								'type' => 'radio',
+								'options' => array('time' => 'Time', 'reps' => 'Reps','load' => 'Load','rounds' => 'Rounds','distance' => 'Distance'),
+								'value' => 'time',
+								'legend' => false
+							));
+                        ?>                       
+					  </div>
+                      
+                      <div class="wodDictionory"> 
+                      <?php 
+							echo $this->Form->label('details','Details'); 
+							echo $this->Form->input('details',array('class' => 'required','type'=>'textarea', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 357px;'));
+                        ?>                      	
+					  </div>
+                    </div> <!--right colum ends here-->
+                        <div class="clear"></div>
+                       
+                       
+                     <div class="bottomCol mb10">
+                     	<h3> Add Movements </h3>
+                        <section class="addMovemnt mt10" id="movementsDataBoxHtml1">
+                      <div class="col"> 	
+                              <div class="wodDictionory"> 
+                                <?php 
+									echo $this->Form->label('movement_category][','Movement'); 
+									echo $this->Form->input('movement_category][',array('type'=>'select', 'class' => 'required', 'options' => $movements, 'label' => false, 'error' => false, 'div' => false));
+								?> 
+                              </div>
+                      </div>
+                      <div class="col right">
+                          <div class="wodDictionory"> 
+                            <?php 
+								echo $this->Form->label('movement_option][','Options'); 
+								echo $this->Form->input('movement_option][',array('type'=>'select', 'class' => 'required optionSelected', 'options' => array('distance' => 'Distance','load' => 'Load', 'reps' => 'Reps', 'none' => 'None') , 'label' => false, 'error' => false, 'div' => false));
+							?> 
+                          </div>
+                          
+                          <div class="wodDictionory mt35 mov_value"> 
+                            <?php echo $this->Form->input('option_data][]', array('class' => 'required number','label' => false,'div' => false,'placeholder' => 'value') ); ?>
+                          </div>
+                          
+                          <div class="wodDictionory mt35"> 
+                            <?php 
+								echo $this->Form->input('movement_distance][',array('type'=>'select', 'class' => 'required distanceOption', 'options' => array('mile' => 'Mile','meter' => 'Meter'), 'label' => false, 'error' => false, 'div' => false, 'style' => 'width:100px; ')); 
+								echo $this->Form->input('movement_load][',array('type'=>'select', 'class' => 'required loadOption', 'options' => array('lbs' => 'lbs','kg' => 'Kg'), 'label' => false, 'error' => false, 'div' => false, 'style'=>'display:none;width:100px; ')); 
+                            ?>
+                          </div>
+                      </div>
+                        <div class="clear"></div>
+                        </section>
+                        <div class="clear"></div>
+                     </div> <!--bottom colum ends here-->    
+                     
+                     
+                         <input class="gray-btn mb20 ml10" value="Remove" id="removeButton" type="button" style='display:none;'>
+                         <input class="gray-btn mb20" value="Add Movement" id="addButton" type="button">
+                    <div class="bottom">
+						
+                        <button onclick="submit_addWodForm();" class="submit_wod_details pull-left">Submit Details</button>
+                    </div>  
+                    
+                <?php echo $this->Form->end(); ?>
+            
+            </div>
+        </div>
+    
+    </div>
+<?php
+$this->Js->get('#WodTypeId')->event('change', 
+	$this->Js->request(array(
+		'controller'=>'events',
+		'action'=>'get_by_type'
+		), array(
+		'update'=>'#WodSubType',
+		'async' => true,
+		'method' => 'post',
+		'dataExpression'=>true,
+		'data'=> $this->Js->serializeForm(array(
+			'isForm' => true,
+			'inline' => true
+			))
+		))
+	);
+?>
+<script type="text/javascript">
+
+
+$(document).ready(function(){ 
+    var counter = 2;
+    $("#addButton").click(function () { 
+	    var html = $("#movementsDataBoxHtml1").html();
+		$(".addMovemnt:last").after('<section class="addMovemnt mt10" id="movementsDataBoxHtml'+ counter +'">'+ html + '</section>');
+		
+		if(counter >= 1)
+		{
+			$("#removeButton").show();	
+		}
+		counter++;
+     });
+ 
+     $("#removeButton").click(function () {
+		if(counter==1){
+	          alert("No more textbox to remove");
+	          return false;
+	       } 	 
+		counter--;	
+		
+		if(counter == 1)
+		{
+			$("#removeButton").hide();	
+		} 
+        $("#movementsDataBoxHtml" + counter).remove();
+ 
+     });
+     
+    $(".optionSelected").live('change',function(){
+		var selectedOption = $(this).val();
+		
+		var parentId = $(this).parents('section').attr("id");
+	
+		if ( selectedOption == 'distance'){
+			$('#' + parentId + ' .distanceOption').show();
+			$('#' + parentId + ' .loadOption').hide();
+		}else if ( selectedOption == 'load'){
+			$('#' + parentId + ' .distanceOption').hide();
+			$('#' + parentId + ' .loadOption').show();
+		}else{
+			$('#' + parentId + ' .distanceOption').hide();
+			$('#' + parentId + ' .loadOption').hide();
+		}
+	});
+     
+  });
+
+  
+	CKEDITOR.replace( 'WodDescription' ,
+	{
+		toolbar: [
+			{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
+			[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
+			'/',																					// Line break - next group will be placed in new line.
+			{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+		]
+	});
+	CKEDITOR.replace( 'WodDetails' ,
+	{
+		toolbar: [
+			{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
+			[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
+			'/',																					// Line break - next group will be placed in new line.
+			{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+		]
+	});
+	
+	
+	function submit_addWodForm()
+	{
+		$('#AddWodForm').validate({
+            submitHandler: function(form) {    
+				            
+               $('.submit_wod_details').hide();
+               $.post('<?php echo $this->webroot; ?>events/save_custom_wod', $('#AddWodForm').serialize(), function(data){ 
+					
+					var response = JSON.parse(data);
+				
+					if(response['status'] == 'success')
+					{
+						$('.wods_select').append('<option id="op_wod_' + response['div']+'_'+response['ctr'] + '_' + response['wod_id'] + '" value="' + response['wod_id'] + '">' + response['wod_title'] + '</option>');	
+					}
+					
+					$('.wod_select_' +response['div']+'_'+response['ctr']).val(response['wod_id']);
+					get_wod_details(response['wod_id'], response['div'] ,response['ctr'], response['num'], response['division'], response['division_sex']);
+					document.getElementById('AddWodForm').reset();
+					$('.submit_wod_details').show();
+					$('.custom_wod_popup').hide();
+					scrollToAnchor('.new_division_' + response['div']);	
+			   });
+            }   
+        });	
+        return false;
+	}
+	
+	
+	function close_form()
+	{
+		var div = $('#WodDiv').val();
+		document.getElementById('AddWodForm').reset(); 
+		$('.custom_wod_popup').fadeOut();	
+		scrollToAnchor('.new_division_' + div);
+	}
+</script>
+
+<?php
+if (class_exists('JsHelper') && method_exists($this->Js, 'writeBuffer')) echo $this->Js->writeBuffer();
+// Writes cached scripts
+?>    
+

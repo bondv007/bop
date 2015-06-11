@@ -1,0 +1,103 @@
+<?php
+	echo $this->Html->script('jquery-ui.custom'); 
+	echo $this->Html->css(array('jquery-ui.custom')); 
+ ?>
+<header class="header row">
+	<div class="page-mid">
+		<?php
+			echo $this->Html->link($this->Html->image(FRONT_END_IMAGES_PATH.'logo.png', array('width' => '104','height' => '94')), '/', array('escape' => false) );
+		?>	
+		<div class="fRight head-right">
+			<ul class="links">
+				<?php 
+				if ( $SESS_LOGGEDIN )
+				{
+					?>					
+					<li><a href="#">Subscribe</a></li>
+					<li><a href="<?php echo $this->webroot.'users/profile'; ?>"><?php echo $this->Session->read('Auth.User.first_name'); ?></a></li>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')) ?>">Logout</a></li>
+					<?php
+				}
+				else 
+				{
+					?>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'register')) ?>">Register</a></li>
+					<li><a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')) ?>">Login</a></li>
+					<li><a href="#">Subscribe</a></li>
+					<?php
+				}
+				?>
+				
+			</ul>
+			
+			<div class="search-box">
+				<?php echo $this->Form->create('searchForm', array('url' => array('controller' => 'info', 'action' => 'search'),'type' => 'get')); ?>
+				<input type="text" id="searchKey" name="key" placeholder="Search..." value="<?php if(isset($key)) echo $key; ?>">
+				<input type="submit">
+				<?php echo $this->Form->end(); ?>
+			</div>
+			
+		</div>
+	</div>
+	<nav class="main-menu row sepadd">
+		<div class="page-mid">
+			<ul>
+				<li class="<?php echo (($this->params['controller'] == 'pages' && $this->params['action'] == 'display')?'active':'') ?>"><?php echo $this->Html->link('Home', '/') ?></li>
+				<li class="<?php echo (($this->params['controller'] == 'events' && $this->params['action'] == 'index')?'active':'') ?>"><?php echo $this->Html->link('Events', array('controller' => 'events', 'action' => 'index')) ?></li>
+				<li class="<?php echo (($this->params['controller'] == 'leaderboard')?'active':'') ?>"><?php echo $this->Html->link('Leaderboard', array('controller' => 'leaderboard')) ?></li>
+				<li><a href="<?php echo $this->webroot.'athlete'; ?>">Athletes</a></li>
+				<li><a href="<?php echo $this->webroot.'affiliate'; ?>">Affiliates</a></li>
+				<li class="<?php echo (($this->params['controller'] == 'aboutus' && $this->params['action'] == 'index')?'active':'') ?>"><?php echo $this->Html->link('About', array('controller' => 'aboutus'), array('escape' => false)) ?></li>
+			</ul>
+		</div>
+	</nav>
+	
+	<?php if($this->params['controller'] == 'events' &&  $this->params['action'] == 'create_event'){ ?>
+		
+	<nav class="row">
+        	<div class="page-mid">
+            		<div class="filter-search row">
+             <div class="blue fRight">
+                	<button type="submit" onclick="window.location.href='<?php echo $this->webroot.'users'; ?>'">Back to Dashboard</button>
+                </div>
+            </div>
+            </div>
+        </nav>	
+		
+	<?php } ?>
+	<?php if($this->params['controller'] == 'info' &&  $this->params['action'] == 'faq'){ ?>
+		 <nav class="athlt-profile-top row">
+        	<div class="page-mid">
+        		<?php echo $this->Form->create('FaqSearch',array('url' => array('controller'=>'info', 'action' => 'faq'), 'method' =>'post')); ?>
+                <div class="boxSearch mb10 inlineBlock">
+                <label>Search FAQ’s</label>
+                <div class="clear"></div>
+                <input type="text" id="faq_keyword" name="faq_keyword" value=" <?php if(isset($faq_keyword) && !empty($faq_keyword)) echo $faq_keyword; ?>" class="text mr10 pull-left" placeholder="Enter Keyword" />
+                	<select class="big pull-left mr10" id="faq_search_type" name="faq_search_type"> 
+                    	<option value="">Select</option>
+                    	<option value="1" <?php if(isset($faq_type) && $faq_type == '1') echo 'selected'; ?>>Questions</option>
+                    	<option value="2" <?php if(isset($faq_type) && $faq_type == '2') echo 'selected'; ?>>Answers</option>
+                    </select>
+            	<div class="blue pull-left">
+                	<button type="submit">Search</button>
+                </div>
+                </div>
+             <?php echo $this->Form->end();  ?>
+            </div>
+           
+        </nav>
+	<?php } ?>	
+</header>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$( "#searchKey" ).autocomplete({
+				source: '<?php echo $this->webroot.'info/search_suggestion'; ?>',
+				focus: function( event, ui ) {
+						$( "#searchKey" ).val( ui.item.label );
+					return false;
+				}
+		});	
+	});
+</script>
