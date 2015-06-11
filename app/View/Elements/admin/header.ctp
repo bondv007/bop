@@ -3,7 +3,7 @@
 		<!--Logo Start from Here-->
 		<span class="floatleft logo">
 			<?php 
-				echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logo.png', array('title' => "Crossfit", 'alt' => "Crossfit", 'style' => "margin-top:-26px;")), '/admin/', array('escape' => false));
+				echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logo.png', array('title' => "Best of Pedigree", 'alt' => "Best of Pedigree", 'style' => "margin-top:-26px;")), '/admin/', array('escape' => false));
 			?>
 		</span>
 		<!--Logo end  Here-->
@@ -36,7 +36,7 @@
 					</ul>
 				</div>
 			</li>
-			<li onmouseout="this.className=''" onmouseover="this.className='hov'">
+			<!--<li onmouseout="this.className=''" onmouseover="this.className='hov'">
 				<?php echo $this->Html->link('WOD Dictionary', array('controller' => 'wods', 'action' => 'admin_index')); ?>
 				<div class="sub">
 					<ul>
@@ -99,7 +99,7 @@
 						<li><?php echo $this->Html->link('Athlete of the month', array('controller' => 'athlete','action' => 'admin_athlete_of_month'), array('title' => 'Manage athlete of the month')); ?></a></li>
 					</ul>
 				</div>
-			</li>					
+			</li>-->					
 		</ul>
 	</div>
 	<div class="logout"><?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logout.gif'), array('controller' => 'users', 'action' => 'admin_logout'), array('escape' => false)); ?></div>

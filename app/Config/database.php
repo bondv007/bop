@@ -62,7 +62,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'bop',
+		'database' => 'bestofpedigree',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);

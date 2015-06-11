@@ -43,6 +43,7 @@
 									echo $this->Form->input(null, array(
 											'type'=>'text',
 											'name'=>'keyword',
+											'placeholder' => 'First name/ Last name/ Email',
 											'class' => 'input',
 											'id' => 'keyword',
 											'style' => 'width: 200px;',
@@ -50,7 +51,7 @@
 									));
 								?>
 							</td>
-							<td valign="middle" align="left" width="200" >
+							<!--<td valign="middle" align="left" width="200" >
 								<strong><?php echo __('Account Type :'); ?></strong>
 									<?php
 									if ( !empty($this->request->query['type']) )
@@ -71,7 +72,7 @@
 											'selected' => $type
 									));
 								?>
-							</td>
+							</td>-->
 							<td valign="middle" align="left" style="width:100%">
 								<div class="black_btn2 mtop15">
 									<span class="upper">

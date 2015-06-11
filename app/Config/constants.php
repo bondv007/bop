@@ -1,24 +1,13 @@
 <?php
 $config = array();
-if($_SERVER['HTTP_HOST'] == 'demo.xicom.us')
-{	
-	define('SITE_URL', 'http://demo.xicom.us/crossfit/');
-}
-elseif($_SERVER['HTTP_HOST'] == '192.168.1.200' || $_SERVER['HTTP_HOST'] == 'localhost')
-{
-	define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/crossfit/website/');
-}
-else 
-{
-	define('SITE_URL', 'http://localhost/crossfit/website/');
-}
 
-define('APPLICATION_NAME','Crossfit');
+define('SITE_URL', 'http://localhost/bop/');
+define('APPLICATION_NAME','Best of Pedigree');
 define('CAKE_ADMIN', 'admin');
 define('ADMIN_EMAIL','vivek.sharma@xicom.biz');
 
-define('SITENAME', 'Crossfit.com');
-define('SITEDISPLAYNAME', 'Crossfit');
+define('SITENAME', 'BestofPedigree.com');
+define('SITEDISPLAYNAME', 'Best of Pedigree');
 define('EMAIL_LOGO_PATH', SITE_URL.'images/logo.png');
 
 define('ADMIN_IMAGES_PATH', SITE_URL.'admin_images/');

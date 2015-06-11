@@ -213,7 +213,7 @@ textarea.input{ width:400px;}
 
 /******************Text and Links css start here**************/
 h1 { color: #444444; font-size: 18px; text-transform:uppercase; text-shadow:0 1px #FFFFFF; }
-.size26 { color: #477aae; font-size:18px; font-weight: bold; text-transform:uppercase; text-shadow:0 1px #fff; line-height:20px;}
+.size26 { color: #477aae; font-size:18px; font-weight: bold; text-shadow:0 1px #fff; line-height:20px;}
 .size14 { font-size:11px!important; text-shadow:0 1px #fff; font-weight: bold; text-transform:uppercase; line-height:15px; color:#888888;}
 .size11 { font-size:11px;}
 /******************Text and Links css end here**************/
