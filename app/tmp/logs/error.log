@@ -374,3 +374,730 @@ Request URL: /bop/admin_images/logo.png
 Stack Trace:
 #0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-06-12 16:27:23 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:28:25 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:28:32 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:42:48 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:42:52 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:42:55 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:43:13 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:47:41 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:48:14 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:48:38 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:48:54 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:50:20 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:52:43 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 16:57:15 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:04:09 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:04:17 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:05:45 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:06:14 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:06:27 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:06:33 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:06:43 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:08:08 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:08:50 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:09:01 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:09:15 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:10:26 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:11:06 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:11:11 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:11:19 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:11:26 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:11:36 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:13:41 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:24:42 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:25:10 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:25:19 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:25:49 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:26:34 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:27:08 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:27:22 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:29:17 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:32:20 Error: [SocketException] SMTP Error: 534 5.7.14 https://support.google.com/mail/answer/78754 pu1sm4259219pdb.33 - gsmtp
+Request URL: /bop/admin/users/forgot_password
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Network\Email\SmtpTransport.php(146): SmtpTransport->_smtpSend('dGVzdDg4ODg4', '235')
+#1 E:\xampp\htdocs\bop\lib\Cake\Network\Email\SmtpTransport.php(62): SmtpTransport->_auth()
+#2 E:\xampp\htdocs\bop\lib\Cake\Network\Email\CakeEmail.php(1075): SmtpTransport->send(Object(CakeEmail))
+#3 E:\xampp\htdocs\bop\app\Controller\UsersController.php(1951): CakeEmail->send('<p>\r\n\tDear Admi...')
+#4 [internal function]: UsersController->admin_forgot_password()
+#5 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-06-12 17:32:21 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:32:32 Error: [SocketException] SMTP Error: 534 5.7.14 https://support.google.com/mail/answer/78754 gy3sm4240328pbb.42 - gsmtp
+Request URL: /bop/admin/users/forgot_password
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Network\Email\SmtpTransport.php(146): SmtpTransport->_smtpSend('dGVzdDg4ODg4', '235')
+#1 E:\xampp\htdocs\bop\lib\Cake\Network\Email\SmtpTransport.php(62): SmtpTransport->_auth()
+#2 E:\xampp\htdocs\bop\lib\Cake\Network\Email\CakeEmail.php(1075): SmtpTransport->send(Object(CakeEmail))
+#3 E:\xampp\htdocs\bop\app\Controller\UsersController.php(1951): CakeEmail->send('<p>\r\n\tDear Admi...')
+#4 [internal function]: UsersController->admin_forgot_password()
+#5 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#6 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-06-12 17:32:32 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:32:49 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:46:35 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:46:43 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:47:26 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:47:53 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:48:23 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:48:40 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:55:44 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:56:20 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:56:26 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 17:56:36 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 18:12:51 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 18:13:06 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-12 18:13:58 Error: [MissingControllerException] Controller class AdminImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminImagesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/admin_images/logo.png
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:07:06 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/73ae26adaa9c6e2e6bc110407a3bf3c3_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:13:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/966cffb5b54ee64b1b4617c98f773a61_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:13:44 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/73ae26adaa9c6e2e6bc110407a3bf3c3_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:15:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/966cffb5b54ee64b1b4617c98f773a61_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:15:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/b02cb161893c7bd497cc5ef87950fd1e_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:15:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/73ae26adaa9c6e2e6bc110407a3bf3c3_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 17:15:34 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/b02cb161893c7bd497cc5ef87950fd1e_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:20:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/05c15c622a37b7a7b1ec0036097ecb4a_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:20:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/b02cb161893c7bd497cc5ef87950fd1e_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:20:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/476fe26aaf9050a8a1ba4388e27e6aa1_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:20:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/966cffb5b54ee64b1b4617c98f773a61_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:20:45 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/73ae26adaa9c6e2e6bc110407a3bf3c3_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/966cffb5b54ee64b1b4617c98f773a61_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/b02cb161893c7bd497cc5ef87950fd1e_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/05c15c622a37b7a7b1ec0036097ecb4a_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/665eb2ad69efdaf2e5eecdc03b69a373_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/15d9a042783506c11d4f5d05840dc6ef_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/73ae26adaa9c6e2e6bc110407a3bf3c3_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:23:01 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/news/476fe26aaf9050a8a1ba4388e27e6aa1_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 18:33:57 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /bop/files/tutorials/d790dd3445e606cd65e5d03bddad9977_200x140.jpg
+Stack Trace:
+#0 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-13 19:12:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY `News`.`id` desc  LIMIT 30' at line 1
+Request URL: /bop/admin/news/manage?keyword=new
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `News`.`...', Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `News`.`...', Array, Array)
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `News`.`...', false)
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(2696): DboSource->read(Object(News), Array)
+#5 E:\xampp\htdocs\bop\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#6 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('News', Array, Array)
+#7 E:\xampp\htdocs\bop\app\Controller\NewsController.php(46): Controller->paginate('News')
+#8 [internal function]: NewsController->admin_manage()
+#9 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#10 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#12 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

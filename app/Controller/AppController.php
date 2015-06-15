@@ -411,6 +411,7 @@ class AppController extends Controller
 	
 	function create_all_thumbs($img_name, $img_loc, $model_name, $field_name = '', $thumb_sizes = array(), $custom_field_name = '')
 	{
+		
 		if(empty($img_name))
 		{
 			return;
@@ -435,7 +436,7 @@ class AppController extends Controller
 				}
 			}
 		}
-
+		
 		if(count($thumb_sizes) && !empty($thumb_sizes))
 		{
 			foreach($thumb_sizes as $size)

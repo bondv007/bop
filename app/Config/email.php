@@ -49,12 +49,12 @@ class EmailConfig {
 
 	public $smtp = array(
         'transport' => 'Smtp',
-        'from' => array('xicomtest8@gmail.com' => 'Simpli Real Estate'),
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => 465,
+        'from' => array('viveksh987@gmail.com' => 'Best of Pedigree'),
+        'host' => 'mail.cssmesh.com',
+        'port' => 25,
         'timeout' => 30,
-        'username' => 'xicomtest8@gmail.com',
-        'password' => 'test88888',
+        'username' => 'info@globusweblogix.com',
+        'password' => 'viveK@321',
         'client' => null,
         'log' => false,
         //'charset' => 'utf-8',

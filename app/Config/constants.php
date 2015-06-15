@@ -4,7 +4,7 @@ $config = array();
 define('SITE_URL', 'http://localhost/bop/');
 define('APPLICATION_NAME','Best of Pedigree');
 define('CAKE_ADMIN', 'admin');
-define('ADMIN_EMAIL','vivek.sharma@xicom.biz');
+define('ADMIN_EMAIL','info@globusweblogix.com');
 
 define('SITENAME', 'BestofPedigree.com');
 define('SITEDISPLAYNAME', 'Best of Pedigree');
@@ -75,6 +75,8 @@ define('UPLOAD_TUTORIAL_DIR', UPLOAD_DIR.DS.'tutorials'.DS);
 define('DISPLAY_ABOUTUS_DIR', SITE_URL.UPLOAD_DIR.'/aboutus/');
 define('DISPLAY_TUTORIAL_DIR', SITE_URL.UPLOAD_DIR.'/tutorials/');
 
+define('UPLOAD_NEWS_DIR', UPLOAD_DIR.DS.'news'.DS);
+define('DISPLAY_NEWS_DIR', SITE_URL.UPLOAD_DIR.'/news/');
 
 $config['ARR_ABOUTUS_BLOCK_TYPE'] = array('block' => 'Block', 'block_big' => 'Big block');
 $config['ARR_SPONSORSHIP_TYPE'] = array('1' => 'Events', 'Fundraiser', 'Social', 'partnership', 'Other');

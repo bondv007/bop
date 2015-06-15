@@ -3,7 +3,7 @@
 		<!--Logo Start from Here-->
 		<span class="floatleft logo">
 			<?php 
-				echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logo.png', array('title' => "Best of Pedigree", 'alt' => "Best of Pedigree", 'style' => "margin-top:-26px;")), '/admin/', array('escape' => false));
+				//echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logo.png', array('title' => "Best of Pedigree", 'alt' => "Best of Pedigree", 'style' => "margin-top:-26px;")), '/admin/', array('escape' => false));
 			?>
 		</span>
 		<!--Logo end  Here-->
@@ -29,10 +29,12 @@
 				<?php echo $this->Html->link('Dashboard', '/admin/'); ?>
 			</li>
 			<li onmouseover="this.className='hov'" onmouseout="this.className=''">
-				<?php echo $this->Html->link('Users', array('controller' => 'users', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?>
+				<?php echo $this->Html->link('Manage', array('controller' => 'users', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?>
 				<div class="sub">
 					<ul>
-						<li><?php echo $this->Html->link('User Manager', array('controller' => 'users', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?></a></li>
+						<li><?php echo $this->Html->link('Manage Users', array('controller' => 'users', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?></a></li>
+						<li><?php echo $this->Html->link('Manage News', array('controller' => 'news', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?></a></li>
+					
 					</ul>
 				</div>
 			</li>
@@ -99,7 +101,15 @@
 						<li><?php echo $this->Html->link('Athlete of the month', array('controller' => 'athlete','action' => 'admin_athlete_of_month'), array('title' => 'Manage athlete of the month')); ?></a></li>
 					</ul>
 				</div>
-			</li>-->					
+			</li>-->
+			<li onmouseout="this.className=''" onmouseover="this.className='hov'">
+				<?php echo $this->Html->link('Settings', 'javascript:void(0)'); ?>
+				<div class="sub">
+					<ul>
+						<li><?php echo $this->Html->link('Change Password', array('controller' => 'users', 'action' => 'change_password','admin' => true), array('title' => 'Change Password')); ?></a></li>
+					</ul>
+				</div>
+			</li>					
 		</ul>
 	</div>
 	<div class="logout"><?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'logout.gif'), array('controller' => 'users', 'action' => 'admin_logout'), array('escape' => false)); ?></div>

@@ -12,14 +12,13 @@
 	  <div class="mr">
 		<div class="middle">
 		  <div class="lb-data">
-			<h1>Administrator Login</h1>			
-			<p class="top15 gray12">Please enter a valid username and password to gain access to the administration console.</p>
+			<h1>Update Password</h1>			
 			<?php
 			echo $this->Form->create(
 				null, array(
 					'url' => array(
 						'controller' => 'users', 
-						'action' => 'admin_login'),
+						'action' => 'admin_update_password', $token),
 					'inputDefaults' => array(
 							'label' => false,
 							'div' => false
@@ -28,29 +27,22 @@
 			);
 			?>
 			<p class="top30"><span class="login_field">
-				<?php echo $this->Form->input('User.email', array('type' => 'text','placeholder' => 'Email', 'class' => 'inpt', 'size' => '38' ));?>
-			 
+				<?php echo $this->Form->input('User.password', array('type' => 'password' ,'placeholder' => 'New Password','class' => 'inpt required', 'size' => '38' , 'maxlength' => 20, 'minlength' => 6));?>
+			
 			  </span>
 			</p>
 			<p class="top15">
 			<span class="login_field">
-				<?php echo $this->Form->input('User.password', array('type' => 'password' ,'placeholder' => 'Password','class' => 'inpt', 'size' => '38' ));?>
+				<?php echo $this->Form->input('User.confirm_password', array('type' => 'password' ,'placeholder' => 'Confirm Password','class' => 'inpt required', 'size' => '38' , 'maxlength' => 20, 'minlength' => 6));?>
 			 </span>
 			</p>
 			<div class="top15">
-				<div class="floatleft top15 gray12">
-					<?php echo $this->Form->input('User.remember_me', array('type' => 'checkbox', 'class' => 'check', 'label' => false)); ?><label for="remember">Remember my login details</label>
-				</div>
-			   
+							   
 				<div class="floatright">
 					<div class="black_btn2"><span class="upper"><input type="submit" value="SUBMIT" name=""></span></div>
 				</div>
 			</div>
-			<div class="top15">
-				<div class="floatright top15 gray12">
-					<?php echo $this->Html->link('Forgot password >>', array('controller' => 'users', 'action' => 'forgot_password', 'admin' => true)); ?>
-				</div>	
-			</div>	
+				
 			<?php echo $this->Form->end() ?>
 		  </div>
 		</div>
@@ -64,3 +56,15 @@
   </div>
 </div>
 <!--Admin logn section end Here-->
+
+<script>
+$(function(){ 
+  $('#UserAdminUpdatePasswordForm').validate({
+  	  rules: {
+	    'data[User][confirm_password]': {
+	      equalTo: "#UserPassword"
+	    }
+	  }
+  });
+});	
+</script>

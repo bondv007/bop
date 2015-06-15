@@ -59,7 +59,7 @@ class UsersController extends AppController
 	{
 		parent::beforeFilter();
 		$this->Auth->allow(array('register','verify','login','facebook','twitter','linkedin','twitter_callback',
-								'forgot_password','update_password','twitter_email','get_profile', 'get_page_feeds'));
+								'forgot_password','update_password','twitter_email','get_profile', 'get_page_feeds','admin_forgot_password','admin_update_password'));
 	}
 	
 	/**
@@ -1863,5 +1863,193 @@ class UsersController extends AppController
 		return $data;	
 	 }	
 	
+	/**
+	 * Method Name : admin_change_password	 
+	 * Author Name : Vivek Sharma
+	 * Date : 12 Jun 2015
+	 * Description : Change Password
+	 */
+	 public function admin_change_password() {
+	 	
+		if(!empty($this->request->data)) {
+			
+			$data = $this->data;
+			$user = $this->User->findById($this->Auth->user('id'));
+			
+			if(!empty($user)) {
+				
+				$old_pass = $this->Auth->password($data['User']['old_password']);
+				
+				if(trim($user['User']['password']) == $old_pass) {
+					
+					$password = $this->Auth->password($data['User']['new_password']);
+					$this->User->id = $user['User']['id'];
+					if($this->User->save(array('password' => $password, 'modified' => date('Y-m-d H:i:s')))) {
+						
+						$this->Session->setFlash(__('Password updated successfully'),'default',array(),'success');
+						$this->redirect($this->referer());
+						
+					}else{
+						$this->Session->setFlash(__('There is some issue. Please try again later.'),'default',array(),'error');
+					}
+					
+				}else{
+					$this->Session->setFlash(__('Old password does not match'),'default',array(),'error');
+				}
+				
+			} else {
+				$this->Session->setFlash(__('User not found'),'default',array(),'error');	
+			}			
+		}
+		
+	 }
+
+
+	/**
+	 * Method Name : admin_forgot_password	 
+	 * Author Name : Vivek Sharma
+	 * Date : 12 Jun 2015
+	 * Description : forgot Password
+	 */
+	public function admin_forgot_password() {
+		
+		if ( $this->request->isPost() )
+		{
+			if (isset($this->request->data['User']) && (count($this->request->data['User']) > 0))
+			{
+				$data = $this->request->data;
+				$exists_user = $this->User->find('first',array('conditions'=>array('status'=>1,'email'=>$data['User']['email'])));
+				
+				if ($exists_user)
+				{					
+					//$post_data['User']['verification_code'] = String::uuid() ;
+					$updateuser = array ();
+					$updateuser['User']['id'] = $exists_user['User']['id'];
+					$updateuser['User']['verification_code'] = String::uuid() ;
+					
+					if ( $this->User->save($updateuser) )
+					{
+						$post_data['User']['verification_code'] = $updateuser['User']['verification_code'] ;
+						$post_data['User']['first_name'] = $exists_user['User']['first_name'] ;
+						$post_data['User']['last_name'] = $exists_user['User']['last_name'] ;						
+						
+						/* Send email to user */
+						$this->loadModel('Emailtemplate');
+						$email_content = $this->Emailtemplate->find('first', array('fields' => array('from_name', 'from_email', 'reply_to', 'subject', 'content'), 'conditions' => array('email_for' => 'Forgot_password')));
+						$content = $email_content['Emailtemplate']['content'];
+						$reset_url = Router::url(array('controller' => 'users', 'action' => 'update_password', $updateuser['User']['verification_code']), true);
+						$reset_url = "<a href='$reset_url'>$reset_url</a>";
+						$content = str_replace(array('{USERNAME}', '{DOMAIN}', '{PWD_RESET_LINK}'), array(ucfirst($post_data['User']['first_name']),'bestofpedigree.com', $reset_url), $content);
+						$email_content['Emailtemplate']['content'] = $content;
+						//~ pr($email_content);
+						//~ die;
+						
+						
+						$email = new CakeEmail('smtp');
+						$email->from(array (ADMIN_EMAIL => APPLICATION_NAME))
+						->to($this->request->data['User']['email'])
+						->emailFormat('html')
+						->subject($email_content['Emailtemplate']['subject'])
+						->send($content);
+						
+						$this->Session->setFlash(__('Please check your email to update your password.'),'default',array(),'success');
+						$this->redirect(array('controller' => 'users','action' => 'forgot_password','admin' => true));
+						//$this->render('email');
+					}
+					else
+					{
+						$this->Session->setFlash(__('Email not sent.'),'default',array(),'success');
+						$this->redirect(array('controller' => 'users','action' => 'forgot_password','admin' => true));
+					}
+				}
+				else
+				{
+					$this->Session->setFlash(__('Email address does not exist.'),'default',array(),'error');
+					$this->redirect(array('controller' => 'users','action' => 'forgot_password','admin' => true));
+				}
+			}
+			else
+			{
+				$this->Session->setFlash(__('Email address does not exist.'),'default',array(),'error');
+				$this->redirect(array('controller' => 'users','action' => 'forgot_password','admin' => true));
+			}
+		}
+		
+	}
+
+
+	/**
+ * Method Name : admin_update_password	 
+ * Author Name : Vivek Sharma
+ * Inputs :  $token
+ * Date : 12 Jun 2015
+ * Description : Update password
+ */ 
+	public function admin_update_password($token=null)
+	{
+		if ( $this->request->is('post') )
+		{
+			$this->set('token',$token);
+			$user = $this->User->find('first',array('conditions'=>array('verification_code'=>$token)));
+			
+			if ($user)
+			{
+				if (strlen(trim($this->request->data['User']['password'])) < 6)
+				{
+					$this->Session->setFlash(__('Password length at least should be 6 chars.'),'default',array(),'error');
+					$this->redirect(array('controller' => 'users','action' => 'update_password',$token, 'admin' => true));
+				}
+				else
+				{
+					if (trim($this->request->data['User']['password']) == trim($this->request->data['User']['confirm_password']))
+					{
+						$updateuser = array ();
+						$updateuser['User']['id'] = $user['User']['id'];
+						$updateuser['User']['verification_code'] = null;	
+						
+						if ( $this->User->save($updateuser) )
+						{
+							$this->User->id = $user['User']['id'];
+							$this->User->saveField('password',$this->Auth->password($this->request->data['User']['password']));
+							
+							//Delete cookie
+							$this->Cookie->delete('remember_me');
+							
+							$this->Session->setFlash(__('Password updated successfully. Please login.'),'default',array(),'success');
+							$this->redirect(array('controller' => 'users','action' => 'login','admin' => true));
+						}
+						else
+						{
+							$this->Session->setFlash(__('Password could not update.'),'default',array(),'error');
+							$this->redirect(array('controller' => 'users','action' => 'update_password',$token,'admin' => true));
+						}
+					}
+					else
+					{
+						$this->Session->setFlash(__('Password and confirm password does not match.'),'default',array(),'error');
+						$this->redirect(array('controller' => 'users','action' => 'update_password',$token ,'admin' => true));
+					}
+				}
+			}else{
+				
+				$this->Session->setFlash(__('Invalid token. Please try again.'),'default',array(),'error');
+				$this->set('token',$token);	
+			}
+		}
+		else
+		{		
+			if ($token)
+			{
+				$this->set('token',$token);
+			}
+			else
+			{
+				$this->Session->setFlash(__('You are not authorized to access this page.'),'default',array(),'error');
+				$this->redirect(array('controller' => 'users','action' => 'login','admin' => true));
+			}			
+		}
+	}
+	
+
 	
 }

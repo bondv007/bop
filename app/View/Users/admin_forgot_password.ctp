@@ -12,14 +12,14 @@
 	  <div class="mr">
 		<div class="middle">
 		  <div class="lb-data">
-			<h1>Administrator Login</h1>			
-			<p class="top15 gray12">Please enter a valid username and password to gain access to the administration console.</p>
+			<h1>Forgot Password</h1>			
+			<p class="top15 gray12">Please enter your email. A link to update password will be sent to your inbox.</p>
 			<?php
 			echo $this->Form->create(
 				null, array(
 					'url' => array(
 						'controller' => 'users', 
-						'action' => 'admin_login'),
+						'action' => 'admin_forgot_password'),
 					'inputDefaults' => array(
 							'label' => false,
 							'div' => false
@@ -32,25 +32,17 @@
 			 
 			  </span>
 			</p>
-			<p class="top15">
-			<span class="login_field">
-				<?php echo $this->Form->input('User.password', array('type' => 'password' ,'placeholder' => 'Password','class' => 'inpt', 'size' => '38' ));?>
-			 </span>
-			</p>
-			<div class="top15">
-				<div class="floatleft top15 gray12">
-					<?php echo $this->Form->input('User.remember_me', array('type' => 'checkbox', 'class' => 'check', 'label' => false)); ?><label for="remember">Remember my login details</label>
-				</div>
-			   
+			
+			<div class="top15">		   
 				<div class="floatright">
 					<div class="black_btn2"><span class="upper"><input type="submit" value="SUBMIT" name=""></span></div>
 				</div>
 			</div>
 			<div class="top15">
-				<div class="floatright top15 gray12">
-					<?php echo $this->Html->link('Forgot password >>', array('controller' => 'users', 'action' => 'forgot_password', 'admin' => true)); ?>
+				<div class="floatleft top15 gray12">
+					<?php echo $this->Html->link('<< Click here to login', array('controller' => 'users', 'action' => 'login', 'admin' => true)); ?>
 				</div>	
-			</div>	
+			</div>
 			<?php echo $this->Form->end() ?>
 		  </div>
 		</div>
@@ -63,4 +55,3 @@
 	</div>
   </div>
 </div>
-<!--Admin logn section end Here-->
