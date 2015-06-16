@@ -6,7 +6,7 @@
     <div class="floatleft mtop10"><h1><?php echo __('Add News Post'); ?></h1></div>
     <div class="floatright">
         <?php
-		echo $this->Html->link('<span>'.__('Back To Manage News').'</span>', array('controller' => 'news','action' => 'index','admin' => true),array('class'=>'black_btn','escape'=>false));?>
+		echo $this->Html->link('<span>'.__('Back To Manage News').'</span>', array('controller' => 'news','action' => 'manage','admin' => true),array('class'=>'black_btn','escape'=>false));?>
 	</div>
 	<div class="errorMsg"><?php echo $this->element('/admin/validations'); ?></div>
 </div>

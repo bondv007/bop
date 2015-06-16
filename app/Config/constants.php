@@ -77,6 +77,8 @@ define('DISPLAY_TUTORIAL_DIR', SITE_URL.UPLOAD_DIR.'/tutorials/');
 
 define('UPLOAD_NEWS_DIR', UPLOAD_DIR.DS.'news'.DS);
 define('DISPLAY_NEWS_DIR', SITE_URL.UPLOAD_DIR.'/news/');
+define('UPLOAD_COLORS_DIR', UPLOAD_DIR.DS.'petcolors'.DS);
+define('DISPLAY_COLORS_DIR', SITE_URL.UPLOAD_DIR.'/petcolors/');
 
 $config['ARR_ABOUTUS_BLOCK_TYPE'] = array('block' => 'Block', 'block_big' => 'Big block');
 $config['ARR_SPONSORSHIP_TYPE'] = array('1' => 'Events', 'Fundraiser', 'Social', 'partnership', 'Other');

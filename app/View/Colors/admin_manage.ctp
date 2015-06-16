@@ -7,7 +7,7 @@ $this->Paginator->options(array (
 ));
 ?>
 <div class="faqs index">
-    <h2><?php echo __('Manage News');?></h2>
+    <h2><?php echo __('Manage Pet Colors');?></h2>
     <p class="top15 gray12">
     <?php 
     echo $this->Session->flash('success');
@@ -68,7 +68,7 @@ $this->Paginator->options(array (
 								</div>
 								 <div class="floatright mtop15" style="">
 								<?php
-								echo $this->Html->link('<span>'.__('Add News').'</span>', array('controller' => 'news','action' => 'add','admin' => true),array('class'=>'black_btn','escape'=>false));
+								echo $this->Html->link('<span>'.__('Add Pet Color').'</span>', array('controller' => 'colors','action' => 'add','admin' => true),array('class'=>'black_btn','escape'=>false));
 	?>
 								</div>
 							</td>
@@ -82,38 +82,35 @@ $this->Paginator->options(array (
 	<?php echo $this->Form->end(); ?>
 	
     <div class="row mtop30">
-	<?php echo $this->Form->create('News', array('controller'=>'news', 'action'=>'delete_multiple','admin'=>true));?>
+	<?php echo $this->Form->create('News', array('controller'=>'colors', 'action'=>'delete_multiple','admin'=>true));?>
         <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="listing">
             <tr>
 				<th align="left"><?php echo $this->Paginator->sort('id');?></th>
-				<th align="left"><?php echo $this->Paginator->sort('filename','Image');?></th>
 				<th align="left"><?php echo $this->Paginator->sort('title');?></th>
-				<th align="left"><?php echo $this->Paginator->sort('status');?></th>
+				<th align="left"><?php echo $this->Paginator->sort('filename','Image');?></th>				
+				
 				<th align="left"><?php echo $this->Paginator->sort('created');?></th>
 				
 				<th class="actions"><?php echo __('Actions');?></th>
             </tr>
 	    <?php
-			foreach ($news as $nw): ?>
+			foreach ($colors as $nw): ?>
 			<tr>
-				<td align="left" valign="middle"><?php echo h($nw['News']['id']); ?>&nbsp;</td>
+				<td align="left" valign="middle"><?php echo h($nw['PetColors']['id']); ?>&nbsp;</td>				
+				<td align="left" valign="middle"><?php echo $nw['PetColors']['name']; ?></td>
 				<td align="left" valign="middle">
-					<img src="<?php if(!empty($nw['News']['filename']))
-										echo create_thumb_imgname($nw['News']['filename'], 200, 140, DISPLAY_NEWS_DIR); 
+					<img src="<?php if(!empty($nw['PetColors']['filename']))
+										echo create_thumb_imgname($nw['PetColors']['filename'], 200, 140, DISPLAY_COLORS_DIR); 
 									else
 										echo $this->webroot.'images/image_not_available.jpg';			
 							?>" alt="" width="120" height="120"/>
 			    </td>
-				<td align="left" valign="middle"><?php echo $nw['News']['title']; ?></td>
-				<td align="left" valign="middle"><?php 
-						if($nw['News']['status'] == 0) echo __('Unpublished');
-						else if($nw['News']['status'] == 1) echo __('Published');
-				 ?></td>
-				<td align="left" valign="middle"><?php echo format_date($nw['News']['created']);  ?></td>
+				
+				<td align="left" valign="middle"><?php echo format_date($nw['PetColors']['created']);  ?></td>
 				<td align="center">
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'view.gif'), array('action' => 'admin_view', $nw['News']['id']),array('escape'=>false)); ?>&nbsp;
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'edit.gif'), array('action' => 'admin_edit', $nw['News']['id']),array('escape'=>false)); ?>&nbsp;
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'trash.gif'), array('action' => 'admin_delete', $nw['News']['id']),array('escape'=>false), __('Are you sure you want to delete # %s?', $nw['News']['id'])); ?>
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'view.gif'), array('action' => 'admin_view', $nw['PetColors']['id']),array('escape'=>false)); ?>&nbsp;
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'edit.gif'), array('action' => 'admin_edit', $nw['PetColors']['id']),array('escape'=>false)); ?>&nbsp;
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'trash.gif'), array('action' => 'admin_delete', $nw['PetColors']['id']),array('escape'=>false), __('Are you sure you want to delete # %s?', $nw['PetColors']['id'])); ?>
 				</td>
 			</tr>
 			<?php endforeach; ?>
