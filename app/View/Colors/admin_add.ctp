@@ -17,7 +17,13 @@
 		
 		<tr>
 			<td align="left"><strong class="upper">Color Name</strong></td>
-			<td align="left"><?php	echo $this->Form->input('name',array('class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
+			<td align="left"><?php	echo $this->Form->input('name',array('class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));	?>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="left"><strong class="upper">Marking</strong></td>
+			<td align="left"><?php	echo $this->Form->input('marking',array('class' => 'input', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
 			</td>
 		</tr>
 		

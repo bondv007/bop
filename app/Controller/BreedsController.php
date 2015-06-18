@@ -3,17 +3,17 @@
 App::uses('Controller', 'Controller');
 
 /**
- * News Controller
+ * Breed Controller
  *
- * Purpose : Manage News
+ * Purpose : Manage Breed
  * @project Best of Pedigree
- * @since 13 June, 2015
+ * @since 18 June, 2015
  * @version Cake Php 2.3.8
  * @author : Vivek Sharma
  */
-class NewsController extends AppController 
+class BreedsController extends AppController 
 {
-	public $uses = array('News');
+	public $uses = array('Breed');
 	
 	public function beforeFilter() {
 		parent::beforeFilter();
@@ -23,36 +23,35 @@ class NewsController extends AppController
 	/**
 	 * Method Name : admin_manage	 
 	 * Author Name : Vivek Sharma
-	 * Date : 13 June 2015
-	 * Description : manage news
+	 * Date : 18 June 2015
+	 * Description : manage breed
 	 */
 	public function admin_manage() {
 		
-		$this->News->recursive = 0;
+		$this->Breed->recursive = 0;
 		
-		$conditions = "News.status != 2";
+		$conditions = "Breed.status != 2";
 		if ( !empty($this->request->query['keyword']))
 		{
 			$keyword = strtolower(trim($this->request->query['keyword']));
-			$conditions	.= " AND ( LOWER(News.title)) LIKE '%" . $keyword . "%' ";
+			$conditions	.= " AND ( LOWER(Breed.title)) LIKE '%" . $keyword . "%' ";
 		}
 		
 		$this->paginate = array(
 			'conditions' => $conditions,
-			'order' => 'News.id desc',
+			'order' => 'Breed.name asc',
 			'limit' => ADMIN_PAGE_LIMIT
 		);
 		
-		$news = $this->paginate('News');
-		$this->set('news', $news);		
+		$breed = $this->paginate('Breed');
+		$this->set('breed', $breed);		
 	}
-	
 	
 	/**
 	 * Method Name : admin_add
 	 * Author Name : Vivek Sharma
-	 * Date : 25 June 2014
-	 * Description : add news 
+	 * Date : 18 June 2015
+	 * Description : add breed 
 	 */
     public function admin_add()
     {
@@ -66,13 +65,13 @@ class NewsController extends AppController
 			{
 				$data_arr = $this->data;
 				
-				$this->News->set($data_arr);
+				$this->Breed->set($data_arr);
 	
-				if($this->News->validates() && !$error_flag)
+				if($this->Breed->validates() && !$error_flag)
 				{
 					if(!empty($_FILES['filename']['name']))
 					{
-						$config['upload_path'] = UPLOAD_NEWS_DIR;
+						$config['upload_path'] = UPLOAD_BREED_DIR;
 						$config['allowed_types'] = 'gif|jpg|png|jpeg';
 						$config['max_size']	= 1200;
 						$config['encrypt_name'] = true;
@@ -82,7 +81,7 @@ class NewsController extends AppController
 						if ($this->Upload->do_upload('filename'))
 						{
 							$imgdata_arr = $this->Upload->data();
-							$data_arr['News']['filename'] = $imgdata_arr['file_name'];
+							$data_arr['Breed']['filename'] = $imgdata_arr['file_name'];
 						}
 						else
 						{
@@ -94,16 +93,16 @@ class NewsController extends AppController
 					if(!$error_flag)
 					{
 						
-						if($this->News->save($data_arr))
+						if($this->Breed->save($data_arr))
 						{
 							if(!empty($_FILES['filename']['name']))
 							{
-								$this->create_all_thumbs($imgdata_arr['file_name'], UPLOAD_NEWS_DIR, 'News', 'filename', array(), 'news');
+								$this->create_all_thumbs($imgdata_arr['file_name'], UPLOAD_BREED_DIR, 'Breed', 'filename', array(), 'breed');
 							}
 							
-							$this->Session->setFlash(__('News post added successfully'),'default',array(),'success');
+							$this->Session->setFlash(__('Breed added successfully'),'default',array(),'success');
 	
-							$this->redirect(array('controller' => 'news', 'action' => 'manage', 'admin' => true));
+							$this->redirect(array('controller' => 'breeds', 'action' => 'manage', 'admin' => true));
 						}
 						else
 						{
@@ -117,56 +116,55 @@ class NewsController extends AppController
 					$errors = array_merge($errors, $add_errors);
 				}
 			}
-		}
-				
+		}				
     }
-
+	
 	
 	/**
 	 * Method Name : admin_view	 
 	 * Author Name : Vivek Sharma
-	 * Date : 13 June 2015
-	 * Description : view news 
+	 * Date : 18 June 2015
+	 * Description : view breed 
 	 */
     public function admin_view($id = null)
     {
-		$this->News->id = $id;
-		if (!$this->News->exists())
+		$this->Breed->id = $id;
+		if (!$this->Breed->exists())
 		{
-			throw new NotFoundException(__('No News found'));
+			throw new NotFoundException(__('No Breed found'));
 		}
 		
-		$news = $this->News->read(null, $id);
-		$this->set('news', $news);
+		$breed = $this->Breed->read(null, $id);
+		$this->set('breed', $breed);
     }
 	
 	
 	/**
 	 * Method Name : admin_edit	 
 	 * Author Name : Vivek Sharma
-	 * Date : 13 June 2015
-	 * Description : edit news
+	 * Date : 18 June 2015
+	 * Description : edit breed
 	 */
     public function admin_edit($id = null)
     {
-		$this->News->id = $id;
+		$this->Breed->id = $id;
 		$errors = array();
 		$add_errors = array();
 		$error_flag = false;
 		
-		$row = $this->News->read();
+		$row = $this->Breed->read();
 		
 		if(!empty($this->data))
 		{
 			$data_arr = $this->data;
 
-			$this->News->set($data_arr);
+			$this->Breed->set($data_arr);
 
-			if($this->News->validates() && !$error_flag)
+			if($this->Breed->validates() && !$error_flag)
 			{
 				if(!empty($_FILES['filename']['name']))
 				{
-					$config['upload_path'] = UPLOAD_NEWS_DIR;
+					$config['upload_path'] = UPLOAD_BREED_DIR;
 					$config['allowed_types'] = 'gif|jpg|png|jpeg';
 					$config['max_size']	= 1200;
 					$config['encrypt_name'] = true;
@@ -176,7 +174,7 @@ class NewsController extends AppController
 					if ($this->Upload->do_upload('filename'))
 					{
 						$imgdata_arr = $this->Upload->data();
-						$data_arr['News']['filename'] = $imgdata_arr['file_name'];
+						$data_arr['Breed']['filename'] = $imgdata_arr['file_name'];
 					}
 					else
 					{
@@ -187,25 +185,25 @@ class NewsController extends AppController
 
 				if(!$error_flag)
 				{
-					if(!empty($_FILES['filename']['name']) || !empty($data_arr['News']['img_del']))
+					if(!empty($_FILES['filename']['name']) || !empty($data_arr['Breed']['img_del']))
 					{
-						$this->unlink_thumbs(UPLOAD_NEWS_DIR, 'News', 'filename', array('id' => $row['News']['id']), array(), 'news');
-						if(empty($_FILES['filename']['name']) && !empty($data_arr['News']['img_del']))
+						$this->unlink_thumbs(UPLOAD_BREED_DIR, 'Breed', 'filename', array('id' => $row['Breed']['id']), array(), 'breed');
+						if(empty($_FILES['filename']['name']) && !empty($data_arr['Breed']['img_del']))
 						{
-							$data_arr['News']['filename'] = '';
+							$data_arr['Breed']['filename'] = '';
 						}
 					}
 
-					if($this->News->save($data_arr))
+					if($this->Breed->save($data_arr))
 					{
 						if(!empty($_FILES['filename']['name']))
 						{
-							$this->create_all_thumbs($imgdata_arr['file_name'], UPLOAD_NEWS_DIR, 'News', 'filename', array(), 'news');
+							$this->create_all_thumbs($imgdata_arr['file_name'], UPLOAD_BREED_DIR, 'Breed', 'filename', array(), 'breed');
 						}
 						
-						$this->Session->setFlash(__('News post updated successfully'),'default',array(),'success');
+						$this->Session->setFlash(__('Breed updated successfully'),'default',array(),'success');
 	
-						$this->redirect(array('controller' => 'news', 'action' => 'manage', 'admin' => true));
+						$this->redirect(array('controller' => 'breeds', 'action' => 'manage', 'admin' => true));
 					}
 					else
 					{
@@ -231,25 +229,27 @@ class NewsController extends AppController
 	/**
 	 * Method Name : admin_delete	 
 	 * Author Name : Vivek Sharma
-	 * Date : 13 June 2015
-	 * Description : delete news 
+	 * Date : 18 June 2015
+	 * Description : delete Breed 
 	 */
     public function admin_delete($id = null)
     {
-		$this->News->id = $id;
-		if (!$this->News->exists())
+		$this->Breed->id = $id;
+		if (!$this->Breed->exists())
 		{
-			throw new NotFoundException(__('No News found'));
+			throw new NotFoundException(__('No Breed found'));
 		}
-		if ($this->News->delete())
+		if ($this->Breed->delete())
 		{
-			$this->Session->setFlash(__('News deleted successfully'),'default',array(),'success');
+			$this->Session->setFlash(__('Breed deleted successfully'),'default',array(),'success');
 			$this->redirect(array ('action' => 'manage', 'admin' => true));
 		}
-		$this->Session->setFlash(__('News was not deleted'),'default',array(),'error');
+		$this->Session->setFlash(__('Breed was not deleted'),'default',array(),'error');
 		$this->redirect(array ('action' => 'index', 'admin' => true));
     }
 	
-			
+	
+	
+	
 }
 	
