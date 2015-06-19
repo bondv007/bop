@@ -82,12 +82,13 @@ $this->Paginator->options(array (
 	<?php echo $this->Form->end(); ?>
 	
     <div class="row mtop30">
-	<?php echo $this->Form->create('News', array('controller'=>'news', 'action'=>'delete_multiple','admin'=>true));?>
+	<?php echo $this->Form->create('Breed', array('controller'=>'breeds', 'action'=>'delete_multiple','admin'=>true));?>
         <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" class="listing">
             <tr>
 				<th align="left"><?php echo $this->Paginator->sort('id');?></th>
 				<th align="left"><?php echo $this->Paginator->sort('filename','Image');?></th>
-				<th align="left"><?php echo $this->Paginator->sort('title');?></th>
+				<th align="left"><?php echo $this->Paginator->sort('name');?></th>
+				<th align="left"><?php echo $this->Paginator->sort('litter_size');?></th>
 				<th align="left"><?php echo $this->Paginator->sort('status');?></th>
 				<th align="left"><?php echo $this->Paginator->sort('created');?></th>
 				
@@ -99,18 +100,18 @@ $this->Paginator->options(array (
 				<td align="left" valign="middle"><?php echo h($nw['Breed']['id']); ?>&nbsp;</td>
 				<td align="left" valign="middle">
 					<img src="<?php if(!empty($nw['Breed']['filename']))
-										echo create_thumb_imgname($nw['News']['filename'], 200, 140, DISPLAY_BREED_DIR); 
+										echo create_thumb_imgname($nw['Breed']['filename'], 200, 140, DISPLAY_BREED_DIR); 
 									else
 										echo $this->webroot.'images/image_not_available.jpg';			
 							?>" alt="" width="120" height="120"/>
 			    </td>
 				<td align="left" valign="middle"><?php echo $nw['Breed']['name']; ?></td>
-				
-				<td align="left" valign="middle"><?php echo format_date($nw['News']['created']);  ?></td>
+				<td align="left" valign="middle"><?php echo $nw['Breed']['litter_size']; ?></td>
+				<td align="left" valign="middle"><?php echo format_date($nw['Breed']['created']);  ?></td>
 				<td align="center">
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'view.gif'), array('action' => 'admin_view', $nw['News']['id']),array('escape'=>false)); ?>&nbsp;
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'edit.gif'), array('action' => 'admin_edit', $nw['News']['id']),array('escape'=>false)); ?>&nbsp;
-				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'trash.gif'), array('action' => 'admin_delete', $nw['News']['id']),array('escape'=>false), __('Are you sure you want to delete # %s?', $nw['News']['id'])); ?>
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'view.gif'), array('action' => 'admin_view', $nw['Breed']['id']),array('escape'=>false)); ?>&nbsp;
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'edit.gif'), array('action' => 'admin_edit', $nw['Breed']['id']),array('escape'=>false)); ?>&nbsp;
+				<?php echo $this->Html->link($this->Html->image(ADMIN_IMAGES_PATH.'trash.gif'), array('action' => 'admin_delete', $nw['Breed']['id']),array('escape'=>false), __('Are you sure you want to delete # %s?', $nw['Breed']['id'])); ?>
 				</td>
 			</tr>
 			<?php endforeach; ?>

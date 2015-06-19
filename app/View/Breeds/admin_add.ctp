@@ -1,48 +1,64 @@
-<?php $this->Html->script(array('ckeditor/ckeditor'), array('inline'=>false));?>
 <?php 
-	$options = array(1 => 'Publish',0 => 'Unpublish' );
+	$this->Html->script(array('ckeditor/ckeditor'), array('inline'=>false));
+	$num_options = array();
+	for($i = 1; $i <=10; $i++) {
+		$num_options[$i] = $i;
+	}
+
+?>
+<?php 
+	$options = array(1 => 'Active',0 => 'Inactive' );
 ?>
 	<div class="faqs row">
-    <div class="floatleft mtop10"><h1><?php echo __('Add News Post'); ?></h1></div>
+    <div class="floatleft mtop10"><h1><?php echo __('Add New Breed'); ?></h1></div>
     <div class="floatright">
         <?php
-		echo $this->Html->link('<span>'.__('Back To Manage News').'</span>', array('controller' => 'news','action' => 'manage','admin' => true),array('class'=>'black_btn','escape'=>false));?>
+		echo $this->Html->link('<span>'.__('Back To Manage Breeds').'</span>', array('controller' => 'breeds','action' => 'manage','admin' => true),array('class'=>'black_btn','escape'=>false));?>
 	</div>
 	<div class="errorMsg"><?php echo $this->element('/admin/validations'); ?></div>
 </div>
 
 <div align="center" class="whitebox mtop15">
-    <?php echo $this->Form->create('News',array('type' => 'file'));?>
-    	<?php echo $this->Form->input('id', array('type'=>'hidden')); ?>
-    <table cellspacing="0" cellpadding="7" border="0" align="center">
-		
-		
+    <?php echo $this->Form->create('Breed',array('type' => 'file')); ?>
+    	
+    <table cellspacing="0" cellpadding="7" border="0" align="center">		
 		<tr>
-			<td align="left"><strong class="upper">Title</strong></td>
-			<td align="left"><?php	echo $this->Form->input('title',array('class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
+			<td align="left"><strong class="upper">Breed Name</strong></td>
+			<td align="left"><?php	echo $this->Form->input('name',array('class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
 			</td>
-		</tr>
+		</tr>		
 		<tr>
-			<td align="left"><strong class="upper">Content</strong></td>
-			<td align="left"><?php	echo $this->Form->input('content',array('class' => 'input','type'=>'textarea', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
+			<td align="left"><strong class="upper">Litter Size</strong></td>
+			<td align="left"><?php	echo $this->Form->input('litter_size',array('type' => 'select', 'options' => $num_options, 'empty' => 'Select Litter Size', 'class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
 			</td>
-		</tr>
+		</tr>				
 		<tr>
-			<td valign="middle"><strong class="upper"><?php echo $this->Form->label('img', __('Image'));?></strong></td>
-			<td>
-				<?php
-					if(!empty($this->data['News']['filename']))
-					{
-						echo $this->Form->input('filename', array('type' => 'hidden'));
-				?>
-					<img src="<?php echo create_thumb_imgname($this->data['News']['filename'], 200, 140, DISPLAY_NEWS_DIR); ?>" /> 
-				<?php
-						echo $this->Form->checkbox('img_del', array('value' => '1')).' Delete<br/>';
-					}
-				?>
-				<input type="file" name="filename" /> (Upto 2 MB)
+			<td align="left"><strong class="upper">Description</strong></td>
+			<td align="left"><?php	echo $this->Form->input('description',array('class' => 'input','type'=>'textarea', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
 			</td>
+		</tr>		
+	</table>
+	
+	<table id="colorsTable" cellspacing="0" cellpadding="7" border="0" align="center">
+		<tr id="head_row">
+			<td><strong>S.No.</strong></td>
+			<td><strong>Image</strong></td>
+			<td><strong>Color</strong></td>
+			<td><strong>Marking</strong></td>
+			<td><strong>Action</strong></td>
 		</tr>
+		<tr id="row_1">
+			<td>1</td>
+			<td><input type="file" name="filename[]" /> (Upto 2 MB)</td>
+			<td><input type="text" name="data['Breed']['breed_color'][]"></td>
+			<td><input type="text" name="data['Breed']['breed_marking'][]"></td>
+			<td><a href="javascript://" onclick="delete_color(1);">Delete</a></td>
+		</tr>
+	</table>
+	<input type="hidden" id="num_colors" value="1"/>
+	<div><button type="button" onclick="add_colors();">Add Colors/Markings</div>
+	
+	<table cellspacing="0" cellpadding="7" border="0" align="center">	
 		<tr>
 			<td align="left"><strong class="upper">Status</strong></td>
 			<td align="left"><?php	echo $this->Form->input('status',array('type' => 'select', 'options' => $options,'class' => 'input required', 'label' => false, 'error' => false, 'div' => false));?>
@@ -54,13 +70,13 @@
         </tr>  
     </table>
 </div>
-<script>
+<script type="text/javascript">
 
-$(function(){ 
-  $('#NewsAdminAddForm').validate();
-});
+	$(function(){ 
+	  $('#BreedAddForm').validate();
+	});
 	
-	CKEDITOR.replace( 'NewsContent' ,
+	CKEDITOR.replace( 'BreedDescription' ,
 	{
 		 filebrowserBrowseUrl :'<?php echo SITE_URL?>js/ckeditor/filemanager/browser/default/browser.html?Connector=<?php echo SITE_URL?>js/ckeditor/filemanager/connectors/php/connector.php',
 		filebrowserImageBrowseUrl : '<?php echo SITE_URL?>js/ckeditor/filemanager/browser/default/browser.html?Type=Image&Connector=<?php echo SITE_URL?>js/ckeditor/filemanager/connectors/php/connector.php',
@@ -69,4 +85,20 @@ $(function(){
 		filebrowserImageUploadUrl : '<?php echo SITE_URL?>js/ckeditor/filemanager/connectors/php/upload.php?Type=Image',
 		filebrowserFlashUploadUrl : '<?php echo SITE_URL?>js/ckeditor/filemanager/connectors/php/upload.php?Type=Flash'
 	});
+	
+	function add_colors() {
+		var num = $('#num_colors').val();
+		num = parseInt(num) + 1;
+		
+		$('#colorsTable tr:last').append('<tr id="row_'+num+'"><td>'+num+'</td><td><input type="file" name="filename[]" /> (Upto 2 MB)</td><td><input type="text" name="data['Breed']['breed_color'][]"></td><td><input type="text" name="data['Breed']['breed_marking'][]"></td><td><a href="javascript://" onclick="delete_color('+num+');">Delete</a></td>
+		</tr>');
+		
+		$('#num_colors').val(num);
+	}
+	
+	function delete_color(num) {
+		$('#row_'+num).remove();
+	}
+	
+	
 </script>
