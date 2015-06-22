@@ -29,7 +29,8 @@
 		</tr>		
 		<tr>
 			<td align="left"><strong class="upper">Litter Size</strong></td>
-			<td align="left"><?php	echo $this->Form->input('litter_size',array('type' => 'select', 'options' => $num_options, 'empty' => 'Select Litter Size', 'class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
+			<td align="left"><?php	echo $this->Form->input('litter_size',array('class' => 'input required', 'label' => false, 'error' => false, 'div' => false, 'style'=>'width: 450px;'));?>
+				&nbsp;&nbsp;<button type="button" onclick="add_random();">Random</button>
 			</td>
 		</tr>				
 		<tr>
@@ -38,37 +39,42 @@
 			</td>
 		</tr>		
 	</table>
-	
-	<table id="colorsTable" cellspacing="0" cellpadding="7" border="0" align="center">
-		<tr id="head_row">
-			<td><strong>S.No.</strong></td>
-			<td><strong>Image</strong></td>
-			<td><strong>Color</strong></td>
-			<td><strong>Marking</strong></td>
-			<td><strong>Action</strong></td>
-		</tr>
-		<tr id="row_1">
-			<td>1</td>
-			<td><input type="file" name="filename[]" /> (Upto 2 MB)</td>
-			<td><input type="text" name="data['Breed']['breed_color'][]"></td>
-			<td><input type="text" name="data['Breed']['breed_marking'][]"></td>
-			<td><a href="javascript://" onclick="delete_color(1);">Delete</a></td>
-		</tr>
-	</table>
+	<hr/>
+	<div class="tables_div" style="margin:20px 0;">
+		<h2>Add Color/Markings</h2>	
+		<table id="colorsTable" cellspacing="0" cellpadding="7" border="1" align="center">
+			<tr id="head_row">
+				<td><strong>S.No.</strong></td>
+				<td><strong>Image</strong></td>
+				<td><strong>Color</strong></td>
+				<td><strong>Marking</strong></td>
+				<td><strong>Action</strong></td>
+			</tr>
+			<tr id="row_1">
+				<td>1</td>
+				<td><input type="file" name="img[1][filename]" /> (Upto 2 MB)</td>
+				<td><input type="text" name="data[Breed][img][1][breed_color]"></td>
+				<td><input type="text" name="data[Breed][img][1][breed_marking]"></td>
+				<td><a href="javascript://" onclick="delete_color(1);">Delete</a></td>
+			</tr>
+		</table>
+	</div>
 	<input type="hidden" id="num_colors" value="1"/>
-	<div><button type="button" onclick="add_colors();">Add Colors/Markings</div>
+	<div style="padding-top: 10px; text-align: right; width: 727px;"><a href="javascript://" onclick="add_colors();">Add more Colors / Markings >></a>
 	
-	<table cellspacing="0" cellpadding="7" border="0" align="center">	
-		<tr>
-			<td align="left"><strong class="upper">Status</strong></td>
-			<td align="left"><?php	echo $this->Form->input('status',array('type' => 'select', 'options' => $options,'class' => 'input required', 'label' => false, 'error' => false, 'div' => false));?>
-			</td>
-		</tr>
-        <tr>
-            <td align="left"></td>
-            <td align="left"><div class="black_btn2"><span class="upper"><?php echo $this->Form->end(__('Submit'));?></span></div></td>
-        </tr>  
-    </table>
+	<div class="tables_div" style="margin:20px 0;">		
+		<table cellspacing="0" cellpadding="7" border="0" align="center" border="1">	
+			<!--<tr>
+				<td align="left"><strong class="upper">Status</strong></td>
+				<td align="left"><?php	echo $this->Form->input('status',array('type' => 'select', 'options' => $options,'class' => 'input required', 'label' => false, 'error' => false, 'div' => false));?>
+				</td>
+			</tr>-->
+	        <tr>
+	            <td align="left"></td>
+	            <td align="left"><div class="black_btn2"><span class="upper"><?php echo $this->Form->end(__('Submit'));?></span></div></td>
+	        </tr>  
+	    </table>
+   </div>
 </div>
 <script type="text/javascript">
 
@@ -90,8 +96,7 @@
 		var num = $('#num_colors').val();
 		num = parseInt(num) + 1;
 		
-		$('#colorsTable tr:last').append('<tr id="row_'+num+'"><td>'+num+'</td><td><input type="file" name="filename[]" /> (Upto 2 MB)</td><td><input type="text" name="data['Breed']['breed_color'][]"></td><td><input type="text" name="data['Breed']['breed_marking'][]"></td><td><a href="javascript://" onclick="delete_color('+num+');">Delete</a></td>
-		</tr>');
+		$('#colorsTable').append('<tr id="row_'+num+'"><td>'+num+'</td><td><input type="file" name="img['+num+'][filename]" /> (Upto 2 MB)</td><td><input type="text" name="data[Breed][img]['+num+'][breed_color]"></td><td><input type="text" name="data[Breed][img]['+num+'][breed_marking]"></td><td><a href="javascript://" onclick="delete_color('+num+'); ">Delete</a></td></tr>');
 		
 		$('#num_colors').val(num);
 	}
@@ -100,5 +105,9 @@
 		$('#row_'+num).remove();
 	}
 	
-	
+	function add_random() {
+		var y=10; var x=1;
+		var num = Math.floor(Math.random() * ((y-x)+1) + x);
+		$('#BreedLitterSize').val(num);
+	}
 </script>

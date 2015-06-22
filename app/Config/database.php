@@ -67,18 +67,18 @@ class DATABASE_CONFIG {
 		//'encoding' => 'utf8',
 	);
 	
-	
-	/*public $default = array(
+	/*
+	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'root',
-		'password' => 'technologies',
-		'database' => 'crossfit',
+		'login' => 'cssme126_pedi',
+		'password' => 'pedigree@123',
+		'database' => 'cssme126_pedigree',
 		'prefix' => '',
 		//'encoding' => 'utf8',
-	);*/
-
+	);
+	*/
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,

@@ -1,7 +1,9 @@
 <?php
 $config = array();
 
-define('SITE_URL', 'http://localhost/bop/');
+//define('SITE_URL', 'http://localhost/bop/');
+//define('SITE_URL', 'http://sandboxonline.in/bestofpedigree/');
+define('SITE_URL', 'http://bestofpedigree.com/beta/');
 define('APPLICATION_NAME','Best of Pedigree');
 define('CAKE_ADMIN', 'admin');
 define('ADMIN_EMAIL','info@globusweblogix.com');
@@ -79,6 +81,8 @@ define('UPLOAD_NEWS_DIR', UPLOAD_DIR.DS.'news'.DS);
 define('DISPLAY_NEWS_DIR', SITE_URL.UPLOAD_DIR.'/news/');
 define('UPLOAD_COLORS_DIR', UPLOAD_DIR.DS.'petcolors'.DS);
 define('DISPLAY_COLORS_DIR', SITE_URL.UPLOAD_DIR.'/petcolors/');
+define('UPLOAD_BREED_DIR', UPLOAD_DIR.DS.'breeds'.DS);
+define('DISPLAY_BREED_DIR', SITE_URL.UPLOAD_DIR.'/breeds/');
 
 $config['ARR_ABOUTUS_BLOCK_TYPE'] = array('block' => 'Block', 'block_big' => 'Big block');
 $config['ARR_SPONSORSHIP_TYPE'] = array('1' => 'Events', 'Fundraiser', 'Social', 'partnership', 'Other');

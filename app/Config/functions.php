@@ -1448,4 +1448,27 @@ function format_date($date, $format="F j, Y") {
 }
 
 
+##### File upload function #####
+##Creation Date: 25 July, 2003
+##Purpose: Uploading files
+function upload_my_file($upload_file, $destination) {
+    //move_uploaded_file
+    if (move_uploaded_file($upload_file, $destination)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function removeSpecialChar($image_name) {
+    $image_name = str_replace(" ", "", $image_name);
+    $image_name = str_replace("(", "", $image_name);
+    $image_name = str_replace(")", "", $image_name);
+    $image_name = str_replace("{", "", $image_name);
+    $image_name = str_replace("}", "", $image_name);
+    $image_name = str_replace("[", "", $image_name);
+    $image_name = str_replace("]", "", $image_name);
+    return $image_name;
+}
+
 	

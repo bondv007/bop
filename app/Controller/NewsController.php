@@ -57,7 +57,7 @@ class NewsController extends AppController
     public function admin_add()
     {
 		if ($this->request->is('post'))
-		{
+		{	
 			$errors = array();
 			$add_errors = array();
 			$error_flag = false;

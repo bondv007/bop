@@ -34,7 +34,8 @@
 					<ul>
 						<li><?php echo $this->Html->link('Manage Users', array('controller' => 'users', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?></a></li>
 						<li><?php echo $this->Html->link('Manage News', array('controller' => 'news', 'action' => 'manage','admin' => true), array('title' => 'Users Listing')); ?></a></li>
-						<li><?php echo $this->Html->link('Manage Pet Colors', array('controller' => 'colors', 'action' => 'manage','admin' => true), array('title' => 'Pet Colors')); ?></a></li>					
+						<li><?php echo $this->Html->link('Manage Breeds', array('controller' => 'breeds', 'action' => 'manage','admin' => true), array('title' => 'Manage Breeds')); ?></a></li>					
+					
 					</ul>
 				</div>
 			</li>

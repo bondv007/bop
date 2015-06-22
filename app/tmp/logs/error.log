@@ -1150,3 +1150,236 @@ Stack Trace:
 #3 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ColorsController), Object(CakeRequest), Object(CakeResponse))
 #4 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2015-06-18 19:32:57 Error: [MissingTableException] Table breeds for model Breed was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'breeds',
+  'class' => 'Breed',
+  'ds' => 'default',
+)
+Request URL: /bop/admin/breeds/manage
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('breeds')
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(2696): Model->getDataSource()
+#2 E:\xampp\htdocs\bop\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#3 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Breed', Array, Array)
+#4 E:\xampp\htdocs\bop\app\Controller\BreedsController.php(46): Controller->paginate('Breed')
+#5 [internal function]: BreedsController->admin_manage()
+#6 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(BreedsController), Array)
+#7 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(BreedsController), Object(CakeRequest), Object(CakeResponse))
+#9 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-06-19 21:30:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Breed.status' in 'where clause'
+Request URL: /bop/admin/breeds/manage
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Breed`....', Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Breed`....', Array, Array)
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Breed`....', false)
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Breed), Array)
+#5 E:\xampp\htdocs\bop\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#6 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Breed', Array, Array)
+#7 E:\xampp\htdocs\bop\app\Controller\BreedsController.php(47): Controller->paginate('Breed')
+#8 [internal function]: BreedsController->admin_manage()
+#9 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(BreedsController), Array)
+#10 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(BreedsController), Object(CakeRequest), Object(CakeResponse))
+#12 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-06-19 21:31:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Breed.name' in 'order clause'
+Request URL: /bop/admin/breeds/manage
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Breed`....', Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(666): DboSource->execute('SELECT `Breed`....', Array, Array)
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(1077): DboSource->fetchAll('SELECT `Breed`....', false)
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Breed), Array)
+#5 E:\xampp\htdocs\bop\lib\Cake\Controller\Component\PaginatorComponent.php(198): Model->find('all', Array)
+#6 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate('Breed', Array, Array)
+#7 E:\xampp\htdocs\bop\app\Controller\BreedsController.php(47): Controller->paginate('Breed')
+#8 [internal function]: BreedsController->admin_manage()
+#9 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(BreedsController), Array)
+#10 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(BreedsController), Object(CakeRequest), Object(CakeResponse))
+#12 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-06-19 21:41:09 Error: [MissingActionException] Action BreedsController::admin_<pre class=() could not be found.
+Exception Attributes: array (
+  'controller' => 'BreedsController',
+  'action' => 'admin_<pre class=',
+)
+Request URL: /bop/admin/breeds/%3Cpre%20class=
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(BreedsController), Object(CakeRequest), Object(CakeResponse))
+#2 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-22 18:26:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 18:26:33 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 18:26:54 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 18:33:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 18:33:02 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 18:33:16 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'cssme126_pedi\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /bop/
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\ConnectionManager.php(107): DboSource->__construct(Array)
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3221): ConnectionManager::getDataSource('default')
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1107): Model->setDataSource('default')
+#4 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('users')
+#5 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1318): Model->getDataSource()
+#6 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(199): Model->schema()
+#7 E:\xampp\htdocs\bop\lib\Cake\View\Helper\FormHelper.php(453): FormHelper->_introspectModel('User', 'fields')
+#8 E:\xampp\htdocs\bop\app\View\Users\admin_login.ctp(28): FormHelper->create(NULL, Array)
+#9 E:\xampp\htdocs\bop\lib\Cake\View\View.php(945): include('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\bop\lib\Cake\View\View.php(907): View->_evaluate('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\bop\lib\Cake\View\View.php(471): View->_render('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(948): View->render(NULL, NULL)
+#13 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#14 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-06-22 19:13:55 Error: [MissingTableException] Table breed_colors for model BreedColor was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'breed_colors',
+  'class' => 'BreedColor',
+  'ds' => 'default',
+)
+Request URL: /bop/admin/breeds/view/2
+Stack Trace:
+#0 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(3243): Model->setSource('breed_colors')
+#1 E:\xampp\htdocs\bop\lib\Cake\Model\Datasource\DboSource.php(1063): Model->getDataSource()
+#2 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(2696): DboSource->read(Object(Breed), Array)
+#3 E:\xampp\htdocs\bop\lib\Cake\Model\Model.php(1526): Model->find('first', Array)
+#4 E:\xampp\htdocs\bop\app\Controller\BreedsController.php(141): Model->read(NULL, '2')
+#5 [internal function]: BreedsController->admin_view('2')
+#6 E:\xampp\htdocs\bop\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(BreedsController), Array)
+#7 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 E:\xampp\htdocs\bop\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(BreedsController), Object(CakeRequest), Object(CakeResponse))
+#9 E:\xampp\htdocs\bop\app\webroot\index.php(111): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
